@@ -13,7 +13,7 @@ using TourManager.Models;
 
 namespace TourManager.ViewModels
 {    
-    public class TourWindowViewModel : INotifyPropertyChanged
+    public class TourWindowViewModel : BaseViewModel, INotifyPropertyChanged
     {
         private ObservableCollection<Tour> _Tours = new ObservableCollection<Tour>(); // Use ObservableCollection
         private Tour currentTour;

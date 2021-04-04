@@ -5,87 +5,106 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TourManager"
         xmlns:tourViewModel="clr-namespace:TourManager.ViewModels"
+        xmlns:views="clr-namespace:TourManager.Views"
         mc:Ignorable="d"
-        d:DataContext="{d:DesignInstance Type=tourViewModel:TourWindowViewModel, IsDesignTimeCreatable=True}"
-        Title="MainWindow" Height="450" Width="800">
+        d:DataContext="{d:DesignInstance Type=tourViewModel:MainViewModel, IsDesignTimeCreatable=True}"
+        Title="Window1" Height="450" Width="800">
 
     <Window.DataContext>
-        <tourViewModel:TourWindowViewModel />
+        <tourViewModel:MainViewModel />
     </Window.DataContext>
+
+    
     
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1" />
-            <ColumnDefinition Width="2*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height ="1*"/>
-            <RowDefinition Height="1*"/>
-        </Grid.RowDefinitions>
 
-        <ListView Name="TourView" Grid.Column="1" Grid.Row="2" Margin="12,0,12,12"  ItemsSource="{Binding Tours}" SelectedItem="{Binding TourSelected}" >
-            <ListView.View>
-                <GridView x:Name="grdViewTours">
-                    <GridViewColumn Header="Tour Name" DisplayMemberBinding="{Binding Name}"  Width="140"/>
-                    <GridViewColumn Header="Distance" DisplayMemberBinding="{Binding TourDistance}" Width="60" />
-                    <GridViewColumn Header="Route Information" DisplayMemberBinding="{Binding RouteInformation}" Width="200" />
-                    <GridViewColumn Header="Description" DisplayMemberBinding="{Binding TourDescription}"  Width="500" />
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Label Content="Distance:" Grid.Column="1" HorizontalAlignment="Left" Margin="17,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.428,-0.235"/>
-        <Label Content="Route Information:" Grid.Column="1" HorizontalAlignment="Left" Margin="17,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.428,-0.235"/>
-        <Label Content="Tour Name: " Grid.Column="1" HorizontalAlignment="Left" Margin="17,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.428,-0.235"/>
-        <Label Grid.Column="1" HorizontalAlignment="Left" Margin="418,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.428,-0.235">
-            <Label Content="Description:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-3.428,-0.235"/>
-        </Label>
-        <TextBox 
-            Grid.Column="1" 
-            HorizontalAlignment="Left" 
-            Height="23" 
-            Margin="151,50,0,0" 
-            TextWrapping="Wrap"   
-            Text="{Binding CurrentTour.Name, UpdateSourceTrigger=PropertyChanged}"
-            VerticalAlignment="Top" 
-            Width="173"
-            />
-        <TextBox 
-            Grid.Column="1" 
-            HorizontalAlignment="Left" 
-            Height="23" 
-            Margin="151,81,0,0" 
-            TextWrapping="Wrap" 
-            Text="{Binding CurrentTour.TourDistance, UpdateSourceTrigger=PropertyChanged}"
-            VerticalAlignment="Top" 
-            Width="173"/>
-        <TextBox 
-            Grid.Column="1" 
-            HorizontalAlignment="Left" 
-            Height="58" 
-            Margin="151,113,0,0" 
-            TextWrapping="Wrap" 
-            Text="{Binding CurrentTour.RouteInformation , UpdateSourceTrigger=PropertyChanged}"
-            VerticalAlignment="Top" 
-            Width="173"/>
-        <TextBox 
-            Grid.Column="1" 
-            HorizontalAlignment="Left" 
-            Height="134" 
-            Margin="427,50,0,0" 
-            TextWrapping="Wrap" 
-            Text="{Binding CurrentTour.TourDescription, UpdateSourceTrigger=PropertyChanged}"
-            VerticalAlignment="Top" 
-            Width="233"/>
-        <Button 
-            x:Name="btnUpdateTours"
-            Content="Update" 
-            Command="{Binding UpdateRelay}"
-            Grid.Column="1" 
-            HorizontalAlignment="Left" 
-            Margin="16,175,0,0" 
-            VerticalAlignment="Top" 
-            Width="75"/>
+        
 
+        <DockPanel>
+            
+            <StackPanel DockPanel.Dock="Top" Margin="4,0,2,2" VerticalAlignment="Center">
+                
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Border BorderBrush="Black"
+                            BorderThickness="2"
+                            VerticalAlignment="Center"
+                            CornerRadius="5"
+                            Grid.Column="0">
+
+                        <Grid Margin="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image 
+                                Grid.Column="0"
+                                Source="C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManager\magnifying_glass.png" 
+                                Height="18"/>
+                            <TextBox Grid.Column="1" BorderThickness="0" Text="" Margin="3 0 0 0"/>
+
+                        </Grid>
+                    </Border>
+                    <Button Grid.Column="2" Content="Search" Margin="5,0,0,0"></Button>
+                </Grid>
+            </StackPanel>
+
+            <Grid DockPanel.Dock="Left" Margin="4,2,2,2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+
+                </Grid.RowDefinitions>
+                <StackPanel Margin="0,2,2,2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Content="+" Margin="2,0,2,0"></Button>
+                        <Button Grid.Column="1" Content="-" Margin="2,0,2,0"></Button>
+                        <Button Grid.Column="2" Content="Edit" Margin="2,0,2,0"></Button>
+
+                    </Grid>
+                </StackPanel>
+                <Border Grid.Row="1" 
+                        CornerRadius="2"
+                        BorderBrush="SteelBlue"
+                        BorderThickness="1">
+                    <ListView >
+
+                    </ListView>
+                </Border>
+                
+                <Button Grid.Row="2" Content="View Details" Margin="2,2,2,2"></Button>
+                <Button Grid.Row="3" Content="Create New Tour" Margin="2,2,2,2"></Button>
+                <Button Grid.Row="4" Content="Edit Selected Tour" Margin="2,2,2,2"></Button>
+                <Button Grid.Row="5" Content="Delete Selected Tour" Margin="2,2,2,2"></Button>
+            </Grid>
+
+
+            <Grid DockPanel.Dock="Bottom">
+                <ContentControl Content="{Binding CurrentViewModel}">
+                    <ContentControl.Resources>
+                        <DataTemplate DataType="{x:Type tourViewModel:HomeViewModel}">
+                            <views:HomeView></views:HomeView>
+                        </DataTemplate>
+                    </ContentControl.Resources>
+                </ContentControl>
+            </Grid>
+        </DockPanel>
     </Grid>
 </Window>
-
