@@ -1,29 +1,84 @@
-﻿<Window x:Class="TourManager.Views.EditTours"
+﻿<UserControl x:Class="TourManager.Views.EditTours"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TourManager"
-        xmlns:tourViewModel="clr-namespace:TourManager.ViewModels"
-        mc:Ignorable="d"
-        d:DataContext="{d:DesignInstance Type=tourViewModel:TourWindowViewModel, IsDesignTimeCreatable=True}"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:local="clr-namespace:TourManager.Views"
+        mc:Ignorable="d">
 
-    <Window.DataContext>
-        <tourViewModel:TourWindowViewModel />
-    </Window.DataContext>
-    
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1" />
-            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height ="1*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height ="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <ListView Name="TourView" Grid.Column="1" Grid.Row="2" Margin="12,0,12,12"  ItemsSource="{Binding Tours}" SelectedItem="{Binding TourSelected}" >
+        
+        <Button Content="Back" Command="{Binding NavigateHomeCommand}"  Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Distance:" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="17,78,0,0" VerticalAlignment="Top"/>
+        <Label Content="Route Information:" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="17,109,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tour Name: " Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="17,47,0,0" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="418,10,0,0" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" Grid.Row="1" Content="Description:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        
+        <TextBox 
+            Grid.Column="0" 
+            Grid.Row="1"
+            HorizontalAlignment="Left" 
+            Height="23" 
+            Margin="151,50,0,0" 
+            TextWrapping="Wrap"   
+            Text="{Binding ElementName=lstViewTours, Path=SelectedItem.Name, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+            VerticalAlignment="Top" 
+            Width="173"
+            />
+        <TextBox 
+            Grid.Column="0" 
+            Grid.Row="1"
+            HorizontalAlignment="Left" 
+            Height="23" 
+            Margin="151,81,0,0" 
+            TextWrapping="Wrap" 
+            Text="{Binding ElementName=lstViewTours, Path=SelectedItem.TourDistance, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+            VerticalAlignment="Top" 
+            Width="173"/>
+        <TextBox 
+            Grid.Column="0" 
+            Grid.Row="1"
+            HorizontalAlignment="Left" 
+            Height="58" 
+            Margin="151,113,0,0" 
+            TextWrapping="Wrap" 
+            Text="{Binding ElementName=lstViewTours, Path=SelectedItem.RouteInformation, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+            VerticalAlignment="Top" 
+            Width="173"/>
+        <TextBox 
+            Grid.Column="0" 
+            Grid.Row="1"
+            HorizontalAlignment="Left" 
+            Height="134" 
+            Margin="427,50,0,0" 
+            TextWrapping="Wrap" 
+            Text="{Binding ElementName=lstViewTours, Path=SelectedItem.TourDescription, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+            VerticalAlignment="Top" 
+            Width="233"/>
+        <Button 
+            x:Name="btnUpdateTours"
+            Content="Update" 
+            Command="{Binding UpdateRelay}"
+            Grid.Column="0" 
+            Grid.Row="1"
+            HorizontalAlignment="Left" 
+            Margin="16,175,0,0" 
+            VerticalAlignment="Top" 
+            Width="75"/>
+
+        <ListView x:Name="TourView" Grid.Column="0" Grid.Row="2" Margin="12,0,12,12"  ItemsSource="{Binding Tours}" SelectedItem="{Binding TourSelected}" >
             <ListView.View>
                 <GridView x:Name="grdViewTours">
                     <GridViewColumn Header="Tour Name" DisplayMemberBinding="{Binding Name}"  Width="140"/>
@@ -33,59 +88,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="Distance:" Grid.Column="1" HorizontalAlignment="Left" Margin="17,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.428,-0.235"/>
-        <Label Content="Route Information:" Grid.Column="1" HorizontalAlignment="Left" Margin="17,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.428,-0.235"/>
-        <Label Content="Tour Name: " Grid.Column="1" HorizontalAlignment="Left" Margin="17,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.428,-0.235"/>
-        <Label Grid.Column="1" HorizontalAlignment="Left" Margin="418,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.428,-0.235">
-            <Label Content="Description:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-3.428,-0.235"/>
-        </Label>
-        <TextBox 
-            Grid.Column="1" 
-            HorizontalAlignment="Left" 
-            Height="23" 
-            Margin="151,50,0,0" 
-            TextWrapping="Wrap"   
-            Text="{Binding CurrentTour.Name}"
-            VerticalAlignment="Top" 
-            Width="173"
-            />
-        <TextBox 
-            Grid.Column="1" 
-            HorizontalAlignment="Left" 
-            Height="23" 
-            Margin="151,81,0,0" 
-            TextWrapping="Wrap" 
-            Text="{Binding CurrentTour.TourDistance}"
-            VerticalAlignment="Top" 
-            Width="173"/>
-        <TextBox 
-            Grid.Column="1" 
-            HorizontalAlignment="Left" 
-            Height="58" 
-            Margin="151,113,0,0" 
-            TextWrapping="Wrap" 
-            Text="{Binding CurrentTour.RouteInformation}"
-            VerticalAlignment="Top" 
-            Width="173"/>
-        <TextBox 
-            Grid.Column="1" 
-            HorizontalAlignment="Left" 
-            Height="134" 
-            Margin="427,50,0,0" 
-            TextWrapping="Wrap" 
-            Text="{Binding CurrentTour.TourDescription}"
-            VerticalAlignment="Top" 
-            Width="233"/>
-        <Button 
-            x:Name="btnUpdateTours"
-            Content="Update" 
-            Command="{Binding UpdateRelay}"
-            Grid.Column="1" 
-            HorizontalAlignment="Left" 
-            Margin="16,175,0,0" 
-            VerticalAlignment="Top" 
-            Width="75"/>
 
     </Grid>
-</Window>
+</UserControl>
 

@@ -14,13 +14,13 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace TourManager.Views
-{ 
+{
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class EditTours : UserControl
+    public partial class CreateTour : UserControl
     {
-        public EditTours()
+        public CreateTour()
         {
             InitializeComponent();
         }

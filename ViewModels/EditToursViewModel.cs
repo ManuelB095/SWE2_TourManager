@@ -10,15 +10,17 @@ using System.Windows;
 using System.Windows.Input;
 using TourManager.Commands;
 using TourManager.Models;
+using TourManager.Stores;
 
 namespace TourManager.ViewModels
 {    
-    public class TourWindowViewModel : BaseViewModel, INotifyPropertyChanged
+    public class EditToursViewModel : BaseViewModel, INotifyPropertyChanged
     {
         private ObservableCollection<Tour> _Tours = new ObservableCollection<Tour>(); // Use ObservableCollection
         private Tour currentTour;
         private Tour tourSelected;
         public RelayCommand UpdateRelay { get; }
+        public ICommand NavigateHomeCommand { get; }
 
         public Tour CurrentTour
         {
@@ -41,18 +43,17 @@ namespace TourManager.ViewModels
             }
         }
 
-        public TourWindowViewModel()
+        public EditToursViewModel(NavigationStore navStore)
         {
             UpdateRelay = new RelayCommand((o) =>
             {
                 OnPropertyChanged(nameof(currentTour.Name));
                 OnPropertyChanged(nameof(currentTour.RouteInformation));
                 OnPropertyChanged(nameof(currentTour.TourDescription));
-                OnPropertyChanged(nameof(currentTour.TourDistance));
-                MessageBox.Show(currentTour.Name);
-                MessageBox.Show(tourSelected.Name);
-
+                OnPropertyChanged(nameof(currentTour.TourDistance));  
             });
+
+            NavigateHomeCommand = new NavigateCommand<HomeViewModel>(navStore, () => new HomeViewModel(navStore));
 
             this.currentTour = new Tour("", "", "", 0);
 
@@ -81,14 +82,6 @@ namespace TourManager.ViewModels
                 _Tours = value;
             }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-
 
     }
 }
