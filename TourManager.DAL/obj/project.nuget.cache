@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "TsFoy78ZcX3Los9JNK1zRjkKvEx/Cs70Q7l9NUdLBTvGMDiD4Q0OXB9L0LC8DKTWHzYVl3cMG71OWxVk2dimSw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.DAL\\TourManager.DAL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mbern\\.nuget\\packages\\npgsql\\5.0.4\\npgsql.5.0.4.nupkg.sha512",
+    "C:\\Users\\mbern\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

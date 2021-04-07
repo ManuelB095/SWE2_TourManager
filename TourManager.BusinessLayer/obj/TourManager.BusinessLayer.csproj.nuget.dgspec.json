@@ -1,0 +1,196 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.BusinessLayer\\TourManager.BusinessLayer.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.BusinessLayer\\TourManager.BusinessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.BusinessLayer\\TourManager.BusinessLayer.csproj",
+        "projectName": "TourManager.BusinessLayer",
+        "projectPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.BusinessLayer\\TourManager.BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\mbern\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.BusinessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mbern\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.DAL\\TourManager.DAL.csproj": {
+                "projectPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.DAL\\TourManager.DAL.csproj"
+              },
+              "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.Models\\TourManagerModels.csproj": {
+                "projectPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.Models\\TourManagerModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.DAL\\TourManager.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.DAL\\TourManager.DAL.csproj",
+        "projectName": "TourManager.DAL",
+        "projectPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.DAL\\TourManager.DAL.csproj",
+        "packagesPath": "C:\\Users\\mbern\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mbern\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.Models\\TourManagerModels.csproj": {
+                "projectPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.Models\\TourManagerModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Npgsql": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.Models\\TourManagerModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.Models\\TourManagerModels.csproj",
+        "projectName": "TourManagerModels",
+        "projectPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.Models\\TourManagerModels.csproj",
+        "packagesPath": "C:\\Users\\mbern\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mbern\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
