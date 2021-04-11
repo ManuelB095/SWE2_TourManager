@@ -104,3 +104,13 @@ C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourMan
 C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Tests\obj\Debug\net5.0-windows\ref\TourManager.Tests.dll
 C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Tests\obj\Debug\net5.0-windows\TourManager.Tests.pdb
 C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Tests\obj\Debug\net5.0-windows\TourManager.Tests.genruntimeconfig.cache
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Tests\bin\Debug\net5.0-windows\TourManager.deps.json
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Tests\bin\Debug\net5.0-windows\TourManager.runtimeconfig.json
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Tests\bin\Debug\net5.0-windows\TourManager.runtimeconfig.dev.json
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Tests\bin\Debug\net5.0-windows\TourManager.exe
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Tests\bin\Debug\net5.0-windows\TourManager.BusinessLayer.dll
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Tests\bin\Debug\net5.0-windows\TourManager.dll
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Tests\bin\Debug\net5.0-windows\TourManager.pdb
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Tests\bin\Debug\net5.0-windows\TourManager.BusinessLayer.pdb
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Tests\bin\Debug\net5.0-windows\Castle.Core.dll
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Tests\bin\Debug\net5.0-windows\Moq.dll

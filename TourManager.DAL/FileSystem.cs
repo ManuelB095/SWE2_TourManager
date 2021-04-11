@@ -38,5 +38,10 @@ namespace TourManager.DAL
                                     "Zum Spar in weiß ich nicht, 5-10 Minuten?", 1));
             return allTourItems;
         }
+
+        public Tour GetTourByName(string _tourName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

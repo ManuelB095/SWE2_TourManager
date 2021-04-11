@@ -7,8 +7,9 @@ using TourManagerModels;
 
 namespace TourManager.DAL
 {
-    public interface IDataAccess
+    public interface IDataAccess // TO DO: Change to more generic type, for example "Item"
     {
         public List<Tour> GetItems();
+        public Tour GetTourByName(string _tourName);
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TourManagerModels
 {
-        public class Tour : INotifyPropertyChanged
+        public class Tour : INotifyPropertyChanged, Item
         {
             private string _Name;
             private string _TourDescription;
