@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.Models\\TourManagerModels.csproj": {}
+    "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManagerApplication\\TourManager.Models\\TourManagerModels.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.Models\\TourManagerModels.csproj": {
+    "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManagerApplication\\TourManager.Models\\TourManagerModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.Models\\TourManagerModels.csproj",
+        "projectUniqueName": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManagerApplication\\TourManager.Models\\TourManagerModels.csproj",
         "projectName": "TourManagerModels",
-        "projectPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.Models\\TourManagerModels.csproj",
+        "projectPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManagerApplication\\TourManager.Models\\TourManagerModels.csproj",
         "packagesPath": "C:\\Users\\mbern\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.Models\\obj\\",
+        "outputPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManagerApplication\\TourManager.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mbern\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NTCarx3JD+kdANZmwE5RFECKMEt7G+lQ7HWzs6jEBqUX1+ZVgt2gXS6OUmJ/wnKSfQxXKcCazHb1UmVSzt2Iww==",
+  "dgSpecHash": "D579bxeOAe+r8r/T5/2r53h4wdwqBiQxmaISeiEdC2AZnuuq47OK3eBgz2FE4bLC9u726mm9JoOfgB7g/armlA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.BusinessLayer\\TourManager.BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManagerApplication\\TourManager.BusinessLayer\\TourManager.BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mbern\\.nuget\\packages\\npgsql\\5.0.4\\npgsql.5.0.4.nupkg.sha512",
     "C:\\Users\\mbern\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"

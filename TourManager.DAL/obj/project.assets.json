@@ -102,11 +102,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.DAL\\TourManager.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManagerApplication\\TourManager.DAL\\TourManager.DAL.csproj",
       "projectName": "TourManager.DAL",
-      "projectPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.DAL\\TourManager.DAL.csproj",
+      "projectPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManagerApplication\\TourManager.DAL\\TourManager.DAL.csproj",
       "packagesPath": "C:\\Users\\mbern\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.DAL\\obj\\",
+      "outputPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManagerApplication\\TourManager.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mbern\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -123,8 +123,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.Models\\TourManagerModels.csproj": {
-              "projectPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManager.Models\\TourManagerModels.csproj"
+            "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManagerApplication\\TourManager.Models\\TourManagerModels.csproj": {
+              "projectPath": "C:\\Users\\mbern\\Downloads\\FH-Stuff\\4.Semester\\SWE2\\TourManagerApplication\\TourManager.Models\\TourManagerModels.csproj"
             }
           }
         }

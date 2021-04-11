@@ -10,3 +10,15 @@ C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManager.Models\obj\Debug\n
 C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManager.Models\obj\Debug\net5.0-windows\TourManagerModels.dll
 C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManager.Models\obj\Debug\net5.0-windows\ref\TourManagerModels.dll
 C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManager.Models\obj\Debug\net5.0-windows\TourManagerModels.pdb
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Models\bin\Debug\net5.0-windows\TourManagerModels.deps.json
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Models\bin\Debug\net5.0-windows\TourManagerModels.dll
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Models\bin\Debug\net5.0-windows\ref\TourManagerModels.dll
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Models\bin\Debug\net5.0-windows\TourManagerModels.pdb
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Models\obj\Debug\net5.0-windows\TourManagerModels.csprojAssemblyReference.cache
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Models\obj\Debug\net5.0-windows\TourManagerModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Models\obj\Debug\net5.0-windows\TourManagerModels.AssemblyInfoInputs.cache
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Models\obj\Debug\net5.0-windows\TourManagerModels.AssemblyInfo.cs
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Models\obj\Debug\net5.0-windows\TourManagerModels.csproj.CoreCompileInputs.cache
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Models\obj\Debug\net5.0-windows\TourManagerModels.dll
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Models\obj\Debug\net5.0-windows\ref\TourManagerModels.dll
+C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager.Models\obj\Debug\net5.0-windows\TourManagerModels.pdb
