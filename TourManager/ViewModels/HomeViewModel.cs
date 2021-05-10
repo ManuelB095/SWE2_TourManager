@@ -8,29 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using TourManager.BusinessLayer;
 using TourManager.Commands;
-using TourManager.Models;
 using TourManager.Stores;
+using TourManagerModels;
 
 namespace TourManager.ViewModels
 {
     public class HomeViewModel : BaseViewModel
     {
-        private ObservableCollection<Tour> _Tours = new ObservableCollection<Tour>(); // Use ObservableCollection
-        private Tour currentTour;
+        private ObservableCollection<Tour> _Tours = new ObservableCollection<Tour>();
+        private ObservableCollection<Log> _Logs = new ObservableCollection<Log>();
         private Tour tourSelected;
-        public RelayCommand UpdateRelay { get; }
         public ICommand NavigateEditToursCommand { get; }
-
-        public Tour CurrentTour
-        {
-            get { return this.currentTour; }
-            set
-            {
-                this.currentTour = value;
-                OnPropertyChanged(nameof(currentTour));
-            }
-        }
+        private ITourItemFactory tourItemFactory;
 
         public Tour TourSelected
         {
@@ -38,42 +29,18 @@ namespace TourManager.ViewModels
             set
             {
                 this.tourSelected = value;
-                this.CurrentTour = value;
+                GetLogsFromName(tourSelected.Name);
                 OnPropertyChanged(nameof(tourSelected));
             }
         }
 
         public HomeViewModel(NavigationStore navStore)
-        {
-            UpdateRelay = new RelayCommand((o) =>
-            {
-                OnPropertyChanged(nameof(currentTour.Name));
-                OnPropertyChanged(nameof(currentTour.RouteInformation));
-                OnPropertyChanged(nameof(currentTour.TourDescription));
-                OnPropertyChanged(nameof(currentTour.TourDistance));
-                MessageBox.Show(currentTour.Name);
-                MessageBox.Show(tourSelected.Name);
-
-            });
+        {           
 
             NavigateEditToursCommand = new NavigateCommand<EditToursViewModel>(navStore, () => new EditToursViewModel(navStore));
-
-            this.currentTour = new Tour("", "", "", 0);
-
-            this._Tours.Add(new Tour("Gemäßigte Stadtroute",
-                                    "Eine aussichtsreiche Zugfahrt, bei der selbst Einsteiger und Babys mitmachen können.",
-                                    "Von Wien nach Linz in 1:15h", 3.5));
-            this._Tours.Add(new Tour("Bergweg nach Mordor",
-                                    "Man geht nicht einfach nach Mordor heißt es im Volksmund. " +
-                                    "Doch das hielt die Wunderpolinger Wanderspatzen nicht auf " +
-                                    "und sie haben trotzdem eine Route angelegt. " +
-                                    "Treten auch sie in die Fußstapfen von Frodo und Co mit " +
-                                    "dieser wunderschönen Bergtour",
-                                    "Von Wien nach Mordor in 96:45", 365));
-            this._Tours.Add(new Tour("Kurz zum Spar",
-                                    "Haben sie es satt, dass wiedermal kein Essen im Kühlschrank ist? Das muss nicht sein! Mit unserer Kurz-Zum-Spar Wanderroute kommen sie " +
-                                    "direkt an jedermanns liebstem Lebensmittelfachhändler vorbei!",
-                                    "Zum Spar in weiß ich nicht, 5-10 Minuten?", 1));
+            this.tourItemFactory = TourItemFactory.GetInstance();
+            this.Tours = new ObservableCollection<Tour>();
+            FillTourItems();
 
         }
 
@@ -84,7 +51,43 @@ namespace TourManager.ViewModels
             {
                 _Tours = value;
             }
-        }        
+        }
+
+        public ObservableCollection<Log> Logs
+        {
+            get { return _Logs; }
+            set
+            {
+                _Logs = value;
+            }
+        }
+
+        private void FillTourItems()
+        {
+            foreach (Tour t in this.tourItemFactory.GetTours())
+            {
+                this.Tours.Add(t);
+            }
+        }
+
+        private void GetLogsFromName(string tourName)
+        {
+            if(tourName != "")
+            {
+                this.Logs.Clear();
+                foreach (Log l in this.tourItemFactory.GetLogs(tourName))
+                {
+                    this.Logs.Add(l);
+                }
+            }            
+        }
+
+        public void RefillData(string tourName)
+        {
+            var match = this.Tours.FirstOrDefault(toursToCheck => toursToCheck.Name.Contains(tourName));
+            if (match != null)
+                this.TourSelected = match; //Change Here triggers change in Logs in the Setter too!
+        }
 
     }
 }

@@ -8,29 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using TourManager.BusinessLayer;
 using TourManager.Commands;
-using TourManager.Models;
 using TourManager.Stores;
+using TourManagerModels;
 
 namespace TourManager.ViewModels
 {    
     public class EditToursViewModel : BaseViewModel, INotifyPropertyChanged
     {
-        private ObservableCollection<Tour> _Tours = new ObservableCollection<Tour>(); // Use ObservableCollection
-        private Tour currentTour;
+        private ObservableCollection<Tour> _Tours;
         private Tour tourSelected;
+        public string currentTourDistance;
         public RelayCommand UpdateRelay { get; }
-        public ICommand NavigateHomeCommand { get; }
+        public ICommand NavigateHomeCommand { get; set; }
+        public ITourItemFactory tourItemFactory { get; set; }
 
-        public Tour CurrentTour
-        {
-            get { return this.currentTour; }
-            set
-            {
-                this.currentTour = value;
-                OnPropertyChanged(nameof(currentTour));
-            }
-        }
+        public event EventHandler<bool> TourEdited;
+
 
         public Tour TourSelected
         {
@@ -38,40 +33,16 @@ namespace TourManager.ViewModels
             set
             {
                 this.tourSelected = value;
-                this.CurrentTour = value;
                 OnPropertyChanged(nameof(tourSelected));
             }
         }
 
         public EditToursViewModel(NavigationStore navStore)
         {
-            UpdateRelay = new RelayCommand((o) =>
-            {
-                OnPropertyChanged(nameof(currentTour.Name));
-                OnPropertyChanged(nameof(currentTour.RouteInformation));
-                OnPropertyChanged(nameof(currentTour.TourDescription));
-                OnPropertyChanged(nameof(currentTour.TourDistance));  
-            });
-
-            NavigateHomeCommand = new NavigateCommand<HomeViewModel>(navStore, () => new HomeViewModel(navStore));
-
-            this.currentTour = new Tour("", "", "", 0);
-
-            this._Tours.Add(new Tour("Gemäßigte Stadtroute",
-                                    "Eine aussichtsreiche Zugfahrt, bei der selbst Einsteiger und Babys mitmachen können.",
-                                    "Von Wien nach Linz in 1:15h", 3.5));
-            this._Tours.Add(new Tour("Bergweg nach Mordor",
-                                    "Man geht nicht einfach nach Mordor heißt es im Volksmund. " +
-                                    "Doch das hielt die Wunderpolinger Wanderspatzen nicht auf " +
-                                    "und sie haben trotzdem eine Route angelegt. " +
-                                    "Treten auch sie in die Fußstapfen von Frodo und Co mit " +
-                                    "dieser wunderschönen Bergtour",
-                                    "Von Wien nach Mordor in 96:45", 365));
-            this._Tours.Add(new Tour("Kurz zum Spar",
-                                    "Haben sie es satt, dass wiedermal kein Essen im Kühlschrank ist? Das muss nicht sein! Mit unserer Kurz-Zum-Spar Wanderroute kommen sie " +
-                                    "direkt an jedermanns liebstem Lebensmittelfachhändler vorbei!",
-                                    "Zum Spar in weiß ich nicht, 5-10 Minuten?", 1));
-
+            UpdateRelay = new RelayCommand(UpdateTour);
+            this.tourItemFactory = TourItemFactory.GetInstance();
+            this.Tours = new ObservableCollection<Tour>();
+            FillTourItems();
         }
 
         public ObservableCollection<Tour> Tours
@@ -82,6 +53,34 @@ namespace TourManager.ViewModels
                 _Tours = value;
             }
         }
+
+        private void FillTourItems()
+        {
+            foreach (Tour t in this.tourItemFactory.GetTours())
+            {
+                this.Tours.Add(t);
+            }
+        }
+
+        public void RefillData(string tourName)
+        {
+            var match = this.Tours.FirstOrDefault(toursToCheck => toursToCheck.Name.Contains(tourName));
+            if (match != null)
+                this.TourSelected = match;
+        }
+
+        private void UpdateTour(object parameter)
+        {
+            tourItemFactory.UpdateTour(TourSelected.Name, TourSelected.TourDescription, TourSelected.RouteInformation, TourSelected.TourDistance);
+            OnTourEdited(true);
+            MessageBox.Show("Successfully updated Tour '" + TourSelected.Name + "' .", "Tour Updated", MessageBoxButton.OK, MessageBoxImage.Information) ;
+        }
+
+        private void OnTourEdited(bool madeChanges)
+        {
+            TourEdited?.Invoke(this, madeChanges);
+        }
+
 
     }
 }

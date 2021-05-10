@@ -10,4 +10,8 @@
     <ProjectReference Include="..\TourManager.BusinessLayer\TourManager.BusinessLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

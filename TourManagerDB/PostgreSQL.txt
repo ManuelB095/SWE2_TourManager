@@ -9,6 +9,27 @@ Create Table Tour (
 	tourdistance decimal not null
 );
 
+Create Table Log (
+	date timestamp primary key,
+	tourname varchar(64) not null,
+	report varchar(1012) not null,
+	distance decimal not null,
+	totaltime time not null,
+	rating decimal not null,
+	vehicle varchar(64) not null,
+	velocity decimal not null,
+	steepsections boolean not null default false,
+	scenic boolean not null default false,
+	difficultylevel int not null,
+	
+	Check(distance >= 0.0),
+	Check(rating >= 0.0 AND rating <= 10.0),
+	Check(velocity >= 0.0),
+	Check(difficultylevel >= 1 AND difficultylevel <= 5),
+	
+	Constraint fk_tourname Foreign Key(tourname) References Tour(tourname)
+);
+
 -- SELECT
 
 Select * from Tour;
@@ -33,3 +54,8 @@ Values('Kurz zum Spar',
 	  'Zum Spar in weiß ich nicht, 5-10 Minuten?',
 	  1);
 	  
+
+
+
+Insert Into Log(date,tourname,report,distance,totaltime,rating,vehicle,velocity,steepsections,scenic,difficultylevel)
+Values('2020-09-21 01:00','Bergweg nach Mordor','hello', 4.5, '00:20:10', 4.5, 'bike',20.5, TRUE, TRUE, 4 );

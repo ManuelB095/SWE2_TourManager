@@ -1,0 +1,577 @@
+//key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=640,480&defaultMarker=none&zoom=11&rand=737758036&session=6085a120-015f-4ee4-02b4-35c2-0e91b2526d11&boundingBox=48.41787,%2015.601635,%2048.192204,%2016.41643";
+{
+    "route": {
+        "hasTollRoad": true,
+        "hasBridge": false,
+        "boundingBox": {
+            "lr": {
+                "lng": 16.373583,
+                "lat": 48.186138
+            },
+            "ul": {
+                "lng": 14.279687,
+                "lat": 48.30685
+            }
+        },
+        "distance": 113.913,
+        "hasTimedRestriction": false,
+        "hasTunnel": true,
+        "hasHighway": true,
+        "computedWaypoints": [],
+        "routeError": {
+            "errorCode": -400,
+            "message": ""
+        },
+        "formattedTime": "01:45:40",
+        "sessionId": "60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+        "hasAccessRestriction": false,
+        "realTime": -1,
+        "hasSeasonalClosure": false,
+        "hasCountryCross": false,
+        "fuelUsed": 6.5,
+        "legs": [
+            {
+                "hasTollRoad": true,
+                "hasBridge": false,
+                "destNarrative": "",
+                "distance": 113.913,
+                "hasTimedRestriction": false,
+                "hasTunnel": true,
+                "hasHighway": true,
+                "index": 0,
+                "formattedTime": "01:45:40",
+                "origIndex": 2,
+                "hasAccessRestriction": false,
+                "hasSeasonalClosure": false,
+                "hasCountryCross": false,
+                "roadGradeStrategy": [
+                    []
+                ],
+                "destIndex": -1,
+                "time": 6340,
+                "hasUnpaved": false,
+                "origNarrative": "Go southwest on B221.",
+                "maneuvers": [
+                    {
+                        "distance": 0.368,
+                        "streets": [
+                            "Favoritenstraße"
+                        ],
+                        "narrative": "Start out going south on Favoritenstraße toward Waltergasse.",
+                        "turnType": 0,
+                        "startPoint": {
+                            "lng": 16.371017,
+                            "lat": 48.192204
+                        },
+                        "index": 0,
+                        "formattedTime": "00:01:00",
+                        "directionName": "South",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.192203521728516,16.371017456054688|marker-1||48.18717575073242,16.37358283996582|marker-2||&center=48.18968963623047,16.372300148010254&defaultMarker=none&zoom=11&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 60,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/icon-dirs-start_sm.gif",
+                        "direction": 4
+                    },
+                    {
+                        "distance": 0.072,
+                        "streets": [
+                            "Südtiroler Platz"
+                        ],
+                        "narrative": "Favoritenstraße becomes Südtiroler Platz.",
+                        "turnType": 0,
+                        "startPoint": {
+                            "lng": 16.373583,
+                            "lat": 48.187176
+                        },
+                        "index": 1,
+                        "formattedTime": "00:00:11",
+                        "directionName": "South",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.18717575073242,16.37358283996582|marker-2||48.18613815307617,16.37346649169922|marker-3||&center=48.1866569519043,16.37352466583252&defaultMarker=none&zoom=13&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 11,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_straight_sm.gif",
+                        "direction": 4
+                    },
+                    {
+                        "distance": 1.886,
+                        "streets": [
+                            "B221"
+                        ],
+                        "narrative": "Turn right onto B221/Wiedner Gürtel. Continue to follow B221.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": 16.373466,
+                            "lat": 48.186138
+                        },
+                        "index": 2,
+                        "formattedTime": "00:04:35",
+                        "directionName": "Southwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.18613815307617,16.37346649169922|marker-3||48.188743591308594,16.341768264770508|marker-4||&center=48.18744087219238,16.357617378234863&defaultMarker=none&zoom=9&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 2048,
+                        "time": 275,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 6
+                    },
+                    {
+                        "distance": 5.495,
+                        "streets": [
+                            "B1"
+                        ],
+                        "narrative": "Turn slight left onto B1/Linke Wienzeile. Continue to follow B1.",
+                        "turnType": 7,
+                        "startPoint": {
+                            "lng": 16.341768,
+                            "lat": 48.188744
+                        },
+                        "index": 3,
+                        "formattedTime": "00:11:58",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.188743591308594,16.341768264770508|marker-4||48.20308303833008,16.232709884643555|marker-5||&center=48.195913314819336,16.28723907470703&defaultMarker=none&zoom=8&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 718,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_slight_left_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 99.464,
+                        "streets": [
+                            "A1"
+                        ],
+                        "narrative": "Stay straight to go onto A1/Westautobahn. Continue to follow A1 (Portions toll).",
+                        "turnType": 0,
+                        "startPoint": {
+                            "lng": 16.23271,
+                            "lat": 48.203083
+                        },
+                        "index": 4,
+                        "formattedTime": "01:16:20",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.20308303833008,16.232709884643555|marker-5||48.22509765625,14.30675983428955|marker-6||&center=48.21409034729004,15.269734859466553&defaultMarker=none&zoom=4&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 129,
+                        "time": 4580,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_straight_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 0.253,
+                        "streets": [],
+                        "narrative": "Take EXIT 169 toward Linz/Praha/Freistadt.",
+                        "turnType": 14,
+                        "startPoint": {
+                            "lng": 14.30676,
+                            "lat": 48.225098
+                        },
+                        "index": 5,
+                        "formattedTime": "00:00:19",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "169",
+                                "type": 1001,
+                                "url": "http://icons.mqcdn.com/icons/rs1001.png?n=169&d=RIGHT",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.22509765625,14.30675983428955|marker-6||48.224952697753906,14.301523208618164|marker-7||&center=48.22502517700195,14.304141521453857&defaultMarker=none&zoom=12&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 19,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_gr_exitright_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 0.057,
+                        "streets": [],
+                        "narrative": "Keep straight to take the ramp toward Linz Zentrum.",
+                        "turnType": 12,
+                        "startPoint": {
+                            "lng": 14.301523,
+                            "lat": 48.224953
+                        },
+                        "index": 6,
+                        "formattedTime": "00:00:07",
+                        "directionName": "Northwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.224952697753906,14.301523208618164|marker-7||48.22541809082031,14.300509452819824|marker-8||&center=48.22518539428711,14.301016330718994&defaultMarker=none&zoom=15&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 7,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_ramp_sm.gif",
+                        "direction": 2
+                    },
+                    {
+                        "distance": 3.474,
+                        "streets": [
+                            "A7",
+                            "Mühlkreisautobahn",
+                            "E55"
+                        ],
+                        "narrative": "Merge onto A7/Mühlkreisautobahn/E55.",
+                        "turnType": 10,
+                        "startPoint": {
+                            "lng": 14.300509,
+                            "lat": 48.225418
+                        },
+                        "index": 7,
+                        "formattedTime": "00:03:52",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.22541809082031,14.300509452819824|marker-8||48.27498245239258,14.295244216918945|marker-9||&center=48.250200271606445,14.297876834869385&defaultMarker=none&zoom=7&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 2176,
+                        "time": 232,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_right_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 0.418,
+                        "streets": [],
+                        "narrative": "Take EXIT 6 on the left.",
+                        "turnType": 15,
+                        "startPoint": {
+                            "lng": 14.295244,
+                            "lat": 48.274982
+                        },
+                        "index": 8,
+                        "formattedTime": "00:00:37",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "6",
+                                "type": 1001,
+                                "url": "http://icons.mqcdn.com/icons/rs1001.png?n=6&d=LEFT",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.27498245239258,14.295244216918945|marker-9||48.27985763549805,14.29189395904541|marker-10||&center=48.27742004394531,14.293569087982178&defaultMarker=none&zoom=11&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 2048,
+                        "time": 37,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_gr_exitleft_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 0.26,
+                        "streets": [],
+                        "narrative": "Keep left to take the A7/E55/139 ramp.",
+                        "turnType": 13,
+                        "startPoint": {
+                            "lng": 14.291894,
+                            "lat": 48.279858
+                        },
+                        "index": 9,
+                        "formattedTime": "00:00:29",
+                        "directionName": "Northwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.27985763549805,14.29189395904541|marker-10||48.28141784667969,14.286829948425293|marker-11||&center=48.28063774108887,14.289361953735352&defaultMarker=none&zoom=12&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 29,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_ramp_sm.gif",
+                        "direction": 2
+                    },
+                    {
+                        "distance": 0.203,
+                        "streets": [
+                            "B139",
+                            "Waldeggstraße"
+                        ],
+                        "narrative": "Merge onto B139/Waldeggstraße.",
+                        "turnType": 10,
+                        "startPoint": {
+                            "lng": 14.28683,
+                            "lat": 48.281418
+                        },
+                        "index": 10,
+                        "formattedTime": "00:00:25",
+                        "directionName": "Northwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.28141784667969,14.286829948425293|marker-11||48.2838249206543,14.2843599319458|marker-12||&center=48.28262138366699,14.285594940185547&defaultMarker=none&zoom=12&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 25,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_right_sm.gif",
+                        "direction": 2
+                    },
+                    {
+                        "distance": 1.652,
+                        "streets": [
+                            "B139"
+                        ],
+                        "narrative": "Keep right at the fork to go on B139.",
+                        "turnType": 16,
+                        "startPoint": {
+                            "lng": 14.28436,
+                            "lat": 48.283825
+                        },
+                        "index": 11,
+                        "formattedTime": "00:04:33",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.2838249206543,14.2843599319458|marker-12||48.30544662475586,14.27968692779541|marker-13||&center=48.29463577270508,14.282023429870605&defaultMarker=none&zoom=9&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 2048,
+                        "time": 273,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_fork_right2_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 0.019,
+                        "streets": [
+                            "B139"
+                        ],
+                        "narrative": "Keep right at the fork to continue on B139.",
+                        "turnType": 16,
+                        "startPoint": {
+                            "lng": 14.279687,
+                            "lat": 48.305447
+                        },
+                        "index": 12,
+                        "formattedTime": "00:00:09",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.30544662475586,14.27968692779541|marker-13||48.30571365356445,14.27971076965332|marker-14||&center=48.305580139160156,14.279698848724365&defaultMarker=none&zoom=15&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 2048,
+                        "time": 9,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_fork_right2_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 0.164,
+                        "streets": [
+                            "B129",
+                            "Obere Donaulände"
+                        ],
+                        "narrative": "Turn right onto B129/Obere Donaulände.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": 14.279711,
+                            "lat": 48.305714
+                        },
+                        "index": 13,
+                        "formattedTime": "00:00:20",
+                        "directionName": "East",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.30571365356445,14.27971076965332|marker-14||48.30649948120117,14.283062934875488|marker-15||&center=48.30610656738281,14.281386852264404&defaultMarker=none&zoom=13&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 20,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 8
+                    },
+                    {
+                        "distance": 0.079,
+                        "streets": [],
+                        "narrative": "Turn slight right onto ramp.",
+                        "turnType": 1,
+                        "startPoint": {
+                            "lng": 14.283063,
+                            "lat": 48.306499
+                        },
+                        "index": 14,
+                        "formattedTime": "00:00:38",
+                        "directionName": "East",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.30649948120117,14.283062934875488|marker-15||48.306610107421875,14.284758567810059|marker-16||&center=48.30655479431152,14.283910751342773&defaultMarker=none&zoom=14&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 38,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_slight_right_sm.gif",
+                        "direction": 8
+                    },
+                    {
+                        "distance": 0.049,
+                        "streets": [],
+                        "narrative": "Turn slight left.",
+                        "turnType": 7,
+                        "startPoint": {
+                            "lng": 14.284759,
+                            "lat": 48.30661
+                        },
+                        "index": 15,
+                        "formattedTime": "00:00:07",
+                        "directionName": "East",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=225,160&locations=48.306610107421875,14.284758567810059|marker-16||48.30685043334961,14.285754203796387|marker-17||&center=48.30673027038574,14.285256385803223&defaultMarker=none&zoom=15&rand=1641601996&session=60880bbd-02fb-4ee4-02b4-35dc-128610d92d31",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 7,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_slight_left_sm.gif",
+                        "direction": 8
+                    },
+                    {
+                        "distance": 0,
+                        "streets": [],
+                        "narrative": "Welcome to LINZ, UPPER AUSTRIA.",
+                        "turnType": -1,
+                        "startPoint": {
+                            "lng": 14.285754,
+                            "lat": 48.30685
+                        },
+                        "index": 16,
+                        "formattedTime": "00:00:00",
+                        "directionName": "",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 0,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/icon-dirs-end_sm.gif",
+                        "direction": 0
+                    }
+                ],
+                "hasFerry": false
+            }
+        ],
+        "options": {
+            "arteryWeights": [],
+            "cyclingRoadFactor": 1,
+            "timeType": 0,
+            "useTraffic": false,
+            "returnLinkDirections": false,
+            "countryBoundaryDisplay": true,
+            "enhancedNarrative": false,
+            "locale": "en_US",
+            "tryAvoidLinkIds": [],
+            "drivingStyle": 2,
+            "doReverseGeocode": true,
+            "generalize": -1,
+            "mustAvoidLinkIds": [],
+            "sideOfStreetDisplay": true,
+            "routeType": "FASTEST",
+            "avoidTimedConditions": false,
+            "routeNumber": 0,
+            "shapeFormat": "raw",
+            "maxWalkingDistance": -1,
+            "destinationManeuverDisplay": true,
+            "transferPenalty": -1,
+            "narrativeType": "text",
+            "walkingSpeed": -1,
+            "urbanAvoidFactor": -1,
+            "stateBoundaryDisplay": true,
+            "unit": "M",
+            "highwayEfficiency": 22,
+            "maxLinkId": 0,
+            "maneuverPenalty": -1,
+            "avoidTripIds": [],
+            "filterZoneFactor": -1,
+            "manmaps": "true"
+        },
+        "locations": [
+            {
+                "dragPoint": false,
+                "displayLatLng": {
+                    "lng": 16.371365,
+                    "lat": 48.19231
+                },
+                "adminArea4": "Vienna",
+                "adminArea5": "Vienna",
+                "postalCode": "",
+                "adminArea1": "AT",
+                "adminArea3": "VIENNA",
+                "type": "s",
+                "sideOfStreet": "N",
+                "geocodeQualityCode": "A5XAX",
+                "adminArea4Type": "County",
+                "linkId": 70406370,
+                "street": "",
+                "adminArea5Type": "City",
+                "geocodeQuality": "CITY",
+                "adminArea1Type": "Country",
+                "adminArea3Type": "State",
+                "latLng": {
+                    "lng": 16.371364,
+                    "lat": 48.192309
+                }
+            },
+            {
+                "dragPoint": false,
+                "displayLatLng": {
+                    "lng": 14.286563,
+                    "lat": 48.305878
+                },
+                "adminArea4": "Linz",
+                "adminArea5": "Linz",
+                "postalCode": "",
+                "adminArea1": "AT",
+                "adminArea3": "UPPER AUSTRIA",
+                "type": "s",
+                "sideOfStreet": "N",
+                "geocodeQualityCode": "A5XAX",
+                "adminArea4Type": "County",
+                "linkId": 114199794,
+                "street": "",
+                "adminArea5Type": "City",
+                "geocodeQuality": "CITY",
+                "adminArea1Type": "Country",
+                "adminArea3Type": "State",
+                "latLng": {
+                    "lng": 14.286563,
+                    "lat": 48.305879
+                }
+            }
+        ],
+        "time": 6340,
+        "hasUnpaved": false,
+        "locationSequence": [
+            0,
+            1
+        ],
+        "hasFerry": false
+    },
+    "info": {
+        "statuscode": 0,
+        "copyright": {
+            "imageAltText": "© 2021 MapQuest, Inc.",
+            "imageUrl": "http://api.mqcdn.com/res/mqlogo.gif",
+            "text": "© 2021 MapQuest, Inc."
+        },
+        "messages": []
+    }
+}

@@ -7,7 +7,7 @@ using TourManagerModels;
 
 namespace TourManager.DAL
 {
-    public class FileSystem : IDataAccess
+    public class FileSystem
     {
         private string filePath;
 
@@ -39,9 +39,25 @@ namespace TourManager.DAL
             return allTourItems;
         }
 
+        public List<Log> GetLogs(string tourName)
+        {
+            throw new NotImplementedException();
+        }
+
         public Tour GetTourByName(string _tourName)
         {
             throw new NotImplementedException();
         }
+
+        public void AddTour(string name, string description, string routeInfo, double distance)
+        {
+
+        }
+
+        public void AddLog(string tourName, DateTime logDate, double logDistance, TimeSpan logTotalTime, double LogRating, string vehicle, string report, bool steepSections, bool scenic, int difficultyLevel)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

@@ -7,7 +7,7 @@
         xmlns:tourViewModel="clr-namespace:TourManager.ViewModels"
         xmlns:views="clr-namespace:TourManager.Views"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="Window1" Height="600" Width="1000">
 
     <Grid>
 
@@ -69,7 +69,7 @@
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Button Grid.Column="0" Content="+" Command="{Binding NavigateCreateToursCommand}" Margin="2,0,2,0"></Button>
-                        <Button Grid.Column="1" Content="-" Margin="2,0,2,0"></Button>
+                        <Button Grid.Column="1" Content="-" Command="{Binding DeleteTourCommand}" Margin="2,0,2,0"></Button>
                         <Button Grid.Column="2" Content="Edit" Command="{Binding NavigateEditToursCommand}" Margin="2,0,2,0"></Button>
                         <Button Grid.Column="3" Content="Refresh" Command="{Binding RefreshCommand}" Margin="2,0,2,0" ></Button>
                     </Grid>
@@ -78,13 +78,13 @@
                         CornerRadius="2"
                         BorderBrush="SteelBlue"
                         BorderThickness="1">
-                    <ListView Name="lstViewTours" ItemsSource="{Binding TourItems}" DisplayMemberPath="Name">
+                    <ListView Name="lstViewTours" ItemsSource="{Binding TourItems}" SelectedItem="{Binding SelectedItem}" DisplayMemberPath="Name">
                         
                     </ListView>
                 </Border>
-                
-                <Button Grid.Row="2" Content="View Details" Margin="2,2,2,2"></Button>
-                <Button Grid.Row="3" Content="Create New Tour" Margin="2,2,2,2"></Button>
+
+                <Button Grid.Row="2" Content="View Logs" Command="{Binding NavigateEditLogsCommand}" Margin="2,2,2,2"></Button>
+                <Button Grid.Row="3" Content="Create New Log" Command="{Binding NavigateCreateLogsCommand}" Margin="2,2,2,2"></Button>
                 <Button Grid.Row="4" Content="Edit Selected Tour" Margin="2,2,2,2"></Button>
                 <Button Grid.Row="5" Content="Delete Selected Tour" Margin="2,2,2,2"></Button>
             </Grid>
@@ -102,6 +102,13 @@
                         <DataTemplate DataType="{x:Type tourViewModel:CreateToursViewModel}">
                             <views:CreateTour></views:CreateTour>
                         </DataTemplate>
+                        <DataTemplate DataType="{x:Type tourViewModel:CreateLogsViewModel}">
+                            <views:CreateLog></views:CreateLog>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type tourViewModel:EditLogsViewModel}">
+                            <views:EditLogs></views:EditLogs>
+                        </DataTemplate>
+                        
 
                     </ContentControl.Resources>
                 </ContentControl>

@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TourManager.DAL\TourManager.DAL.csproj" />
     <ProjectReference Include="..\TourManager.Models\TourManagerModels.csproj" />
   </ItemGroup>

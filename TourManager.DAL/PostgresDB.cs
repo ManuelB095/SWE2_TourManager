@@ -29,6 +29,48 @@ namespace TourManager.DAL
             return items;
         }
 
+        public List<Log> GetLogs(string tourName)
+        {
+            List<Log> LogList = new List<Log>();
+
+            using var conn = new NpgsqlConnection(this.connString);
+            conn.Open();
+
+            using (var cmd = new NpgsqlCommand("Select date,report,distance,totaltime,rating,vehicle,velocity,steepsections,scenic,difficultylevel From Log Where tourname = @tourname", conn))
+            {
+                cmd.Parameters.AddWithValue("tourname", tourName);
+                cmd.Prepare();
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+
+                if (!reader.HasRows)
+                {
+                    string err = "Could not get any logs for '";
+                    err += tourName;
+                    err += "' !";
+                    System.Windows.MessageBox.Show(err, "Information", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Information);
+                }
+
+                while (reader.Read())
+                {
+                    Log dummyLog = new Log();
+                    dummyLog.Date = (DateTime)reader["date"];
+                    dummyLog.Report = (string)reader["report"];
+                    dummyLog.Distance = Convert.ToDouble(reader["distance"]);
+                    dummyLog.TotalTime = (TimeSpan)reader["totaltime"];
+                    dummyLog.Rating = Convert.ToDouble(reader["rating"]);
+                    dummyLog.Vehicle = (string)reader["vehicle"];
+                    dummyLog.SteepSections = (bool)reader["steepsections"];
+                    dummyLog.Velocity = Convert.ToDouble(reader["velocity"]);
+                    dummyLog.Velocity = Math.Round(dummyLog.Velocity, 2);
+                    dummyLog.IsScenic = (bool)reader["scenic"];
+                    dummyLog.DifficultyLevel = Convert.ToInt32(reader["difficultylevel"]);
+                    LogList.Add(dummyLog);
+                }
+                conn.Close();
+                return LogList;
+            }
+        }
+
         public Tour GetTourByName(string _tourName)
         {
             Tour dummyTour = new Tour("", "", "", 0);
@@ -57,6 +99,7 @@ namespace TourManager.DAL
                     string distance = reader["tourdistance"].ToString();
                     dummyTour.TourDistance = Convert.ToDouble(distance);
                 }
+                conn.Close();
                 return dummyTour;
             }
         }
@@ -79,8 +122,126 @@ namespace TourManager.DAL
                         names.Add((string)reader[i]);
                     }
                 }
+                conn.Close();
                 return names;
             }
+        }
+
+        public void AddTour(string name, string description, string routeInfo, double distance)
+        {
+            using var conn = new NpgsqlConnection(this.connString);
+            conn.Open();
+            using (var cmd = new NpgsqlCommand("Insert Into Tour(tourname,description,routeinformation,tourdistance) Values(@name,@desc,@route,@dist)", conn))
+            {
+                cmd.Parameters.AddWithValue("name", name);
+                cmd.Parameters.AddWithValue("desc", description);
+                cmd.Parameters.AddWithValue("route", routeInfo);
+                cmd.Parameters.AddWithValue("dist", distance);
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+            conn.Close();
+        }
+
+        public void AddLog(string tourName, DateTime logDate, double logDistance, TimeSpan logTotalTime, double LogRating, string vehicle, string report, bool steepSections, bool scenic, int difficultyLevel)
+        {           
+            using var conn = new NpgsqlConnection(this.connString);
+            conn.Open();
+            using (var cmd = new NpgsqlCommand("Insert Into Log(date,tourname,report,distance,totaltime,rating,vehicle,velocity,steepsections,scenic,difficultylevel)" +
+            "Values(@date,@tourname,@report,@distance,@totaltime,@rating,@vehicle,@velocity,@steepsections,@scenic,@difficultylevel); ", conn))
+            {
+                double velocity = (logDistance*1000) / (double)logTotalTime.TotalSeconds;
+                velocity = Math.Round(velocity, 2);
+
+                cmd.Parameters.AddWithValue("date", logDate);
+                cmd.Parameters.AddWithValue("tourname", tourName);
+                cmd.Parameters.AddWithValue("report", report);
+                cmd.Parameters.AddWithValue("distance", logDistance);
+                cmd.Parameters.AddWithValue("totaltime", logTotalTime);
+                cmd.Parameters.AddWithValue("rating", LogRating);
+                cmd.Parameters.AddWithValue("vehicle", vehicle);
+                cmd.Parameters.AddWithValue("velocity", velocity);
+                cmd.Parameters.AddWithValue("steepsections", steepSections);
+                cmd.Parameters.AddWithValue("scenic", scenic);
+                cmd.Parameters.AddWithValue("difficultylevel", difficultyLevel);
+
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+            conn.Close();
+        }
+
+        public void UpdateTour(string tourName, string description, string routeInfo, double distance)
+        {
+            using var conn = new NpgsqlConnection(this.connString);
+            conn.Open();
+            using (var cmd = new NpgsqlCommand("Update tour Set description = @description, routeinformation = @routeinformation, tourdistance = @tourdistance Where tourname = @tourname", conn))
+            {
+                cmd.Parameters.AddWithValue("tourname", tourName);
+                cmd.Parameters.AddWithValue("description", description);
+                cmd.Parameters.AddWithValue("routeinformation", routeInfo);
+                cmd.Parameters.AddWithValue("tourdistance", distance);
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+            conn.Close();
+        }
+
+        public void DeleteTour(string tourName)
+        {
+            //Delete All corresponding Logs first (Foreign Key restraint!)
+            DeleteLogsFromTour(tourName);
+
+            //Then Delete Tours
+            using var conn = new NpgsqlConnection(this.connString);
+            conn.Open();
+            using (var cmd = new NpgsqlCommand("Delete From tour Where tourname = @tourname", conn))
+            {
+                cmd.Parameters.AddWithValue("tourname", tourName);
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+            conn.Close();
+        }
+
+        public void DeleteLogsFromTour(string tourName)
+        {
+            using var conn = new NpgsqlConnection(this.connString);
+            conn.Open();
+            using (var cmd = new NpgsqlCommand("Delete From log Where tourname = @tourname", conn))
+            {
+                cmd.Parameters.AddWithValue("tourname", tourName);
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+            conn.Close();
+        }
+
+        public void UpdateLog(string tourName, DateTime logDate, double logDistance, TimeSpan logTotalTime, double LogRating, string vehicle, string report, bool steepSections, bool scenic, int difficultyLevel)
+        {
+            using var conn = new NpgsqlConnection(this.connString);
+            conn.Open();
+            using (var cmd = new NpgsqlCommand("Update log Set report = @report, distance = @distance, totaltime = @totaltime, rating = @rating, vehicle = @vehicle, velocity = @velocity, steepsections = @steepsections, scenic = @scenic, difficultylevel = @difficultylevel Where date = @date And tourname = @tourname", conn))
+            {
+                double velocity = (logDistance * 1000) / (double)logTotalTime.TotalSeconds;
+                velocity = Math.Round(velocity, 2);
+
+                cmd.Parameters.AddWithValue("date", logDate);
+                cmd.Parameters.AddWithValue("tourname", tourName);
+                cmd.Parameters.AddWithValue("report", report);
+                cmd.Parameters.AddWithValue("distance", logDistance);
+                cmd.Parameters.AddWithValue("totaltime", logTotalTime);
+                cmd.Parameters.AddWithValue("rating", LogRating);
+                cmd.Parameters.AddWithValue("vehicle", vehicle);
+                cmd.Parameters.AddWithValue("velocity", velocity);
+                cmd.Parameters.AddWithValue("steepsections", steepSections);
+                cmd.Parameters.AddWithValue("scenic", scenic);
+                cmd.Parameters.AddWithValue("difficultylevel", difficultyLevel);
+
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+            conn.Close();
         }
     }
 }

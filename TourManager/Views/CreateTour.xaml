@@ -28,23 +28,33 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             </Grid>
-            <Button Content="Back Home" Command="{Binding NavigateHomeCommand}"></Button>
+            <Button Content="Back Home" Grid.Column="0" Grid.Row="0" Command="{Binding NavigateHomeCommand}" Width="80" HorizontalAlignment="Left"></Button>
             <Label Content="Tour-Name: " Grid.Row="0" Grid.Column="0"></Label>
-            <TextBox Grid.Row="0" Grid.Column="1" Text="TourName">
+            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding tourName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
 
             </TextBox>
-            <Label Content="Tour-Name: " Grid.Row="0" Grid.Column="0"></Label>
-            <TextBox Grid.Row="1" Text="From">
+            <Label Content="From: " Grid.Row="2" Grid.Column="0"></Label>
+            <TextBox Grid.Row="3" Text="{Binding From, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
 
             </TextBox>
-            <TextBox Grid.Row="2" Text="To">
+            <Label Content="To: " Grid.Row="4" Grid.Column="0"></Label>
+
+            <TextBox Grid.Row="5" Text="{Binding To, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
 
             </TextBox>
-            <TextBox Grid.Row="3" Text="Description">
+            <Label Content="Description: " Grid.Row="6" Grid.Column="0"></Label>
+
+            <TextBox Grid.Row="7" Text="{Binding tourDescription, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,12">
 
             </TextBox>
+            <Button Grid.Row="8" Content="Create Tour" Command="{Binding CreateTourCommand}" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
         </StackPanel>                  
     </Grid>
 </UserControl>
