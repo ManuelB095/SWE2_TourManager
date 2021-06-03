@@ -28,7 +28,6 @@ namespace TourManager.Tests
             Assert.That(test[2].Name == "Kurz zum Spar");
         }
 
-
         [Test]
         public void GetItemsWithMoq_returnsListTours()
         {

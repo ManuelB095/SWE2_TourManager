@@ -1,0 +1,166 @@
+10:41:10,199 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+10:41:13,452 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+10:41:13,793 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+10:41:13,953 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+10:41:14,113 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+10:41:14,275 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+10:41:14,387 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+10:56:16,219 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+12:28:37,570 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+12:31:09,264 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+12:31:29,642 [TourManager.DAL.FileHandler] INFO -Successfully saved image -2.jpg
+12:31:31,050 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+12:49:29,339 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+12:50:09,917 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+12:50:17,336 [TourManager.DAL.FileHandler] INFO -Successfully Deleted File 2.jpg at C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\Maps
+12:50:18,307 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+12:50:37,261 [TourManager.DAL.FileHandler] INFO -Successfully saved image -2.jpg
+12:50:38,557 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+12:54:20,504 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+12:54:23,764 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Vastl2
+13:06:00,366 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+13:06:02,614 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Vastl2
+18:38:49,239 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+18:38:52,295 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Vastl2
+18:40:37,965 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+18:40:40,318 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Vastl2
+18:42:02,120 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+18:42:05,246 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Vastl2
+18:43:07,880 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+18:43:10,241 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Vastl2
+19:01:24,368 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+19:01:26,894 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Hexenjagd
+19:01:27,495 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Vastl2
+19:01:30,664 [TourManager.DAL.FileHandler] INFO -Successfully Deleted File 2.jpg at C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\Maps
+19:01:31,725 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+19:01:33,520 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Hexenjagd
+19:03:48,774 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+19:04:07,303 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+19:04:09,935 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Hexenjagd
+19:04:13,468 [TourManager.DAL.FileHandler] INFO -Successfully Deleted File testMap.jpg at C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\Maps
+19:04:14,461 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+12:23:31,068 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+12:25:20,644 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+12:26:28,017 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+12:27:19,942 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+12:27:28,152 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+12:27:34,256 [TourManager.DAL.FileHandler] INFO -Successfully Deleted File testMap.jpg at C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\Maps
+12:27:35,835 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+12:27:38,578 [TourManager.DAL.FileHandler] INFO -Successfully Deleted File testMap.jpg at C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\Maps
+12:27:39,398 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+12:27:42,746 [TourManager.DAL.FileHandler] INFO -Successfully Deleted File Von Wien nach Linz in 1:15h at C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager\bin\Debug\net5.0-windows
+12:27:43,523 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+12:27:49,162 [TourManager.DAL.FileHandler] INFO -Successfully Deleted File Zum Spar in weiß ich nicht, 5-10 Minuten? at C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager\bin\Debug\net5.0-windows
+12:27:50,062 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+12:27:53,871 [TourManager.DAL.FileHandler] INFO -Successfully Deleted File Von Wien nach Mordor in 96:45 at C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\TourManager\bin\Debug\net5.0-windows
+12:27:54,708 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+12:28:18,849 [TourManager.DAL.FileHandler] INFO -Successfully saved image -1.jpg
+12:28:20,185 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+12:28:21,733 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:33:05,115 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+12:33:08,449 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:33:40,858 [TourManager.DAL.FileHandler] INFO -Successfully saved image -2.jpg
+12:33:43,059 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+12:33:46,851 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:33:46,851 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:34:13,741 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:34:13,742 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:34:13,743 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:34:20,181 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:34:20,182 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:34:20,185 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:34:51,896 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+12:34:54,921 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+13:35:40,390 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+13:36:17,121 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+13:40:03,155 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+16:52:49,905 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+16:53:30,606 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+16:54:15,592 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+16:56:17,921 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+16:57:14,073 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+16:57:44,148 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+16:57:44,151 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:00:50,882 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+17:01:55,199 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+17:03:43,164 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+17:09:47,419 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+17:14:32,145 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+17:19:17,181 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+17:21:28,552 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+17:21:34,847 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:26:09,261 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+17:26:16,287 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:27:04,195 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:27:30,208 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:27:30,209 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:35:25,041 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+17:35:30,121 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:35:32,504 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:35:33,766 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:35:36,861 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:35:39,260 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:35:43,470 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+17:37:15,834 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+17:39:13,027 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+17:40:19,712 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+17:42:35,676 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+17:59:01,219 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+18:04:51,096 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+18:07:01,061 [TourManager.ViewModels.MainViewModel] ERROR -Hey there It's me! Ya Boy! xD
+18:17:04,260 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:05,950 [TourManager.ViewModels.MainViewModel] ERROR -Refreshed!
+18:17:07,797 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:07,801 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:08,668 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:08,669 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:13,911 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:13,911 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:13,913 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:27,463 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:27,464 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:27,464 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:28,868 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:28,868 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:28,868 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:28,869 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:32,916 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:32,916 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:32,917 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:32,917 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:35,069 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:35,069 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:35,069 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:35,070 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:35,070 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:36,105 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:36,105 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:36,106 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:36,106 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:36,107 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:37,659 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:37,659 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:37,660 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:37,660 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:37,660 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:37,661 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:45,729 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:45,729 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:45,730 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:45,730 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:45,730 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:45,731 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:17:45,734 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:18:24,950 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:19:30,942 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:19:37,372 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:20:04,857 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:30:00,563 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:30:41,956 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:31:02,600 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:33:00,292 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:33:04,560 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+18:33:16,859 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+08:51:24,419 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+08:51:28,928 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+08:51:30,376 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor

@@ -26,6 +26,8 @@ namespace TourManager.ViewModels
         
         public event EventHandler<string> selectedItemChanged;
 
+        public event EventHandler<bool> selectedItemDelete;
+
         private ObservableCollection<Tour> _tourItems;
         public BaseViewModel CurrentViewModel => navigationStore.CurrentViewModel;
         public ICommand NavigateEditToursCommand { get; }
@@ -42,6 +44,10 @@ namespace TourManager.ViewModels
 
         public RelayCommand DeleteTourCommand { get; }
 
+        public RelayCommand CreateTourReportCommand { get; }
+
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         public ObservableCollection<Tour> TourItems
         {
             get { return this._tourItems; }
@@ -57,10 +63,18 @@ namespace TourManager.ViewModels
             navigationStore = navStore;
             navigationStore.currentViewModelChanged += OnCurrentViewModelChanged;
 
+            this.tourItemFactory = TourItemFactory.GetInstance();
+            this.TourItems = new ObservableCollection<Tour>();
+            FillTourItems();
+
             DisplayHomeCommand = new NavigateCommand<HomeViewModel>(navigationStore, () =>
             {
-                var viewModel = new HomeViewModel(navigationStore);
+                var viewModel = new HomeViewModel(navigationStore);                
                 this.selectedItemChanged += (_, tourName) => { viewModel.RefillData(tourName); };
+                if (SelectedItem != null)
+                {
+                    OnSelectedItemChanged(this.SelectedItem.Name);
+                }
                 return viewModel;
             });
 
@@ -70,8 +84,12 @@ namespace TourManager.ViewModels
             {
                 var viewModel = new EditToursViewModel(navigationStore);
                 
-                // Add EditToursViewModel`s RefillData method to subscribers. Fire event when selectedItem gets changed!
+                // Add EditToursViewModel`s RefillData method to subscribers. Fire event when selectedItem gets changed!                
                 this.selectedItemChanged += (_, tourName) => { viewModel.RefillData(tourName); };
+                if(SelectedItem != null)
+                {
+                    OnSelectedItemChanged(this.SelectedItem.Name);
+                }
                 viewModel.NavigateHomeCommand = DisplayHomeCommand;
                 viewModel.TourEdited += (_, tourName) => { this.Refresh(_); };                
                 return viewModel;
@@ -82,6 +100,10 @@ namespace TourManager.ViewModels
 
                 //Subscribe to TourCreated Event to update automatically
                 viewModel.TourCreated += (_, tourCreated) => { this.Refresh(_); };
+                if (SelectedItem != null)
+                {
+                    OnSelectedItemChanged(this.SelectedItem.Name);
+                }
                 viewModel.NavigateHomeCommand = DisplayHomeCommand;
                 return viewModel;
             });
@@ -92,6 +114,10 @@ namespace TourManager.ViewModels
 
                 // Add EventSubscriber
                 this.selectedItemChanged += (_, tourName) => { viewModel.UpdateTourName(tourName); };
+                if (SelectedItem != null)
+                {
+                    OnSelectedItemChanged(this.SelectedItem.Name);
+                }
                 viewModel.NavigateHomeCommand = DisplayHomeCommand;
                 return viewModel;
             });
@@ -100,6 +126,10 @@ namespace TourManager.ViewModels
             {
                 var viewModel = new EditLogsViewModel(navigationStore);
                 this.selectedItemChanged += (_, tourName) => { viewModel.UpdateTourName(tourName); };
+                if (SelectedItem != null)
+                {
+                    OnSelectedItemChanged(this.SelectedItem.Name);
+                }
                 viewModel.NavigateHomeCommand = DisplayHomeCommand;
                 viewModel.LogEdited += (_, tourCreated) => { this.Refresh(_); };
                 return viewModel;
@@ -108,10 +138,7 @@ namespace TourManager.ViewModels
             SearchCommand = new RelayCommand(Search);
             RefreshCommand = new RelayCommand(Refresh);
             DeleteTourCommand = new RelayCommand(DeleteSelectedTour);
-
-            this.tourItemFactory = TourItemFactory.GetInstance();
-            this.TourItems = new ObservableCollection<Tour>();
-            FillTourItems();
+            CreateTourReportCommand = new RelayCommand(GenerateTourReport);            
         }
 
         public string SearchName
@@ -168,6 +195,7 @@ namespace TourManager.ViewModels
             TourItems.Clear();
             SearchName = "";
             FillTourItems();
+            log.Error("Refreshed!");
         }
 
         private void FillTourItems()
@@ -183,10 +211,20 @@ namespace TourManager.ViewModels
             var result = MessageBox.Show("The corresponding logs and all tour Information will be deleted", "Delete Tour", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
             if(result == MessageBoxResult.OK)
             {
-                tourItemFactory.DeleteTour(selectedItem.Name);
+                OnSelectedItemDelete(true);
+                tourItemFactory.DeleteTour(selectedItem.Name, selectedItem.RouteInformation);                
                 MessageBox.Show("Successfully deleted Tour " + selectedItem.Name + " .", "Tour Deleted", MessageBoxButton.OK, MessageBoxImage.Information);
                 RefreshCommand.Execute("");
             }
+        }
+
+        private void GenerateTourReport(object parameter)
+        {
+            if(this.SelectedItem.Name != "")
+            {
+                IReportGenerator generator = ReportGenerator.GetInstance();
+                generator.GenerateTourReport(selectedItem);
+            }            
         }
 
         private void OnCurrentViewModelChanged()
@@ -194,9 +232,15 @@ namespace TourManager.ViewModels
             OnPropertyChanged(nameof(CurrentViewModel));
         }
 
-        private void OnSelectedItemChanged(String newSelectionName)
+        private void OnSelectedItemChanged(string newSelectionName)
         {
             selectedItemChanged?.Invoke(this, newSelectionName);
         }
+
+        private void OnSelectedItemDelete(bool deleted)
+        {
+            selectedItemDelete?.Invoke(this, deleted);
+        }
+
     }
 }

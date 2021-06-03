@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using TourManager.BusinessLayer;
 using TourManager.Commands;
 using TourManager.Stores;
@@ -19,6 +21,7 @@ namespace TourManager.ViewModels
     {
         private ObservableCollection<Tour> _Tours;
         private Tour tourSelected;
+        private ImageSource routeImage;
         public string currentTourDistance;
         public RelayCommand UpdateRelay { get; }
         public ICommand NavigateHomeCommand { get; set; }
@@ -33,7 +36,18 @@ namespace TourManager.ViewModels
             set
             {
                 this.tourSelected = value;
+                SetNewBitmapImage(this.tourSelected.RouteInformation);
                 OnPropertyChanged(nameof(tourSelected));
+            }
+        }
+
+        public ImageSource RouteImage
+        {
+            get {return routeImage; }
+            set
+            {
+                routeImage = value;
+                OnPropertyChanged(nameof(RouteImage));
             }
         }
 
@@ -80,7 +94,15 @@ namespace TourManager.ViewModels
         {
             TourEdited?.Invoke(this, madeChanges);
         }
-
+        public void SetNewBitmapImage(string routeInformation)
+        {
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.CacheOption = BitmapCacheOption.OnLoad;
+            image.UriSource = new Uri(routeInformation);
+            image.EndInit();
+            this.RouteImage = image;
+        }
 
     }
 }

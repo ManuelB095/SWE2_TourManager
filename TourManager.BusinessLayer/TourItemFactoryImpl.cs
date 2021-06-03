@@ -9,6 +9,7 @@ namespace TourManager.BusinessLayer
     internal class TourItemFactoryImpl : ITourItemFactory
     {
         private TourItemDAO databaseDAO = new TourItemDAO();
+        private FileHandler fileHandler = new FileHandler();
         public List<Tour> TourItems { get; } = new List<Tour>();
 
         public string CurrentlySelectedTourName { get; set; }
@@ -36,7 +37,7 @@ namespace TourManager.BusinessLayer
 
         public void AddTour(string name, string description, string routeInfo, double distance)
         {
-            databaseDAO.AddTour(name, description, routeInfo, distance);
+            databaseDAO.AddTour(name, description, routeInfo, distance);            
         }
 
        public void AddLog(string tourName, DateTime logDate, double logDistance, TimeSpan logTotalTime, double LogRating, string vehicle, string report, bool steepSections, bool scenic, int difficultyLevel)
@@ -54,8 +55,9 @@ namespace TourManager.BusinessLayer
             databaseDAO.UpdateLog(tourName, logDate, logDistance, logTotalTime, LogRating, vehicle, report, steepSections, scenic, difficultyLevel);
         }
 
-        public void DeleteTour(string tourName)
+        public void DeleteTour(string tourName, string routeInformation)
         {
+            fileHandler.DeleteEntryByName(routeInformation);
             databaseDAO.DeleteTour(tourName);
         }
     }

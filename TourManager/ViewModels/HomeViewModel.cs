@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using TourManager.BusinessLayer;
 using TourManager.Commands;
 using TourManager.Stores;
@@ -20,8 +23,20 @@ namespace TourManager.ViewModels
         private ObservableCollection<Tour> _Tours = new ObservableCollection<Tour>();
         private ObservableCollection<Log> _Logs = new ObservableCollection<Log>();
         private Tour tourSelected;
+        private ImageSource routeImage;
+
         public ICommand NavigateEditToursCommand { get; }
         private ITourItemFactory tourItemFactory;
+
+        public ImageSource RouteImage
+        {
+            get { return this.routeImage; }
+            set
+            {
+                this.routeImage = value;
+                OnPropertyChanged(nameof(RouteImage));
+            }
+        }
 
         public Tour TourSelected
         {
@@ -29,6 +44,7 @@ namespace TourManager.ViewModels
             set
             {
                 this.tourSelected = value;
+                SetNewBitmapImage(this.tourSelected.RouteInformation);
                 GetLogsFromName(tourSelected.Name);
                 OnPropertyChanged(nameof(tourSelected));
             }
@@ -87,6 +103,26 @@ namespace TourManager.ViewModels
             var match = this.Tours.FirstOrDefault(toursToCheck => toursToCheck.Name.Contains(tourName));
             if (match != null)
                 this.TourSelected = match; //Change Here triggers change in Logs in the Setter too!
+        }
+
+        public void SetNewBitmapImage(string routeInformation)
+        {
+            try
+            {
+                BitmapImage image = new BitmapImage();
+                image.BeginInit();
+                image.CacheOption = BitmapCacheOption.OnLoad;
+                image.UriSource = new Uri(routeInformation);
+                image.DecodePixelHeight = 240;
+                image.DecodePixelWidth = 310;
+                image.EndInit();
+                
+                this.RouteImage = image;
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
         }
 
     }

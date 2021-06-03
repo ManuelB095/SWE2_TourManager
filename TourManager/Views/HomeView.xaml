@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:TourManager.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    
     <Grid Margin="2,2,2,2">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -20,7 +21,7 @@
         <TextBlock Grid.Column="0" Grid.Row="0" Text="Name: "></TextBlock>
         <TabControl>
             <TabItem Header="Route">
-                <Image Margin="2,2,2,2" Source="{Binding TourSelected.RouteInformation, UpdateSourceTrigger=PropertyChanged}" Stretch="UniformToFill">
+                <Image Margin="2,2,2,2" Source="{Binding RouteImage, UpdateSourceTrigger=PropertyChanged}" Stretch="None">
                     
                 </Image>
             </TabItem>
@@ -68,7 +69,7 @@
                 <DataGridTextColumn Header="Time(Total)" Binding="{Binding TotalTime}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Rating" Binding="{Binding Rating}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Vehicle" Binding="{Binding Vehicle}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Velocity" Binding="{Binding Velocity}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Velocity(km/h)" Binding="{Binding Velocity}"></DataGridTextColumn>
                 <DataGridTextColumn Header="SteepSections" Binding="{Binding SteepSections}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Scenic" Binding="{Binding IsScenic}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Difficulty Level" Binding="{Binding DifficultyLevel}"></DataGridTextColumn>

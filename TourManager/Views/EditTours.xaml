@@ -33,7 +33,7 @@
                 </Grid.RowDefinitions>
 
 
-                <Image Grid.Column="1" Grid.Row="1" Source="{Binding TourSelected.RouteInformation, UpdateSourceTrigger=PropertyChanged}"               
+                <Image Grid.Column="1" Grid.Row="1" Source="{Binding RouteImage, UpdateSourceTrigger=PropertyChanged}"               
                HorizontalAlignment="Left"
                        Width="400"
                        Margin="20,0,8,0">

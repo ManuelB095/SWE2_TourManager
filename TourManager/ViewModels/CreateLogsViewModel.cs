@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
@@ -13,11 +14,11 @@ using TourManagerModels;
 
 namespace TourManager.ViewModels
 {
-    public class CreateLogsViewModel : BaseViewModel, INotifyPropertyChanged
+    public class CreateLogsViewModel : BaseViewModel, INotifyPropertyChanged, IDataErrorInfo
     {
         public ICommand NavigateHomeCommand { get; set; }
         public ITourItemFactory tourItemFactory { get; }
-        public event EventHandler<Log> LogCreated;
+        public event EventHandler<bool> LogCreated;
         public RelayCommand CreateLogCommand { get; }
 
         private string _tourName;
@@ -31,7 +32,10 @@ namespace TourManager.ViewModels
         private bool _scenic;
         private string _difficultyLevel;
 
+        private string _error;
         public string tourDistance { get; set; }
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
 
         public CreateLogsViewModel(NavigationStore navStore)
         {
@@ -50,8 +54,9 @@ namespace TourManager.ViewModels
                 double LogDistanceAsDouble = Convert.ToDouble(LogDistance);
                 double LogRatingAsDouble = Convert.ToDouble(LogRating);
                 int DifficultyLvlAsInt = Convert.ToInt32(DifficultyLevel);
-                TimeSpan LogTotalTimeTimeSpan = TimeSpan.Parse(LogTotalTime);
+                TimeSpan LogTotalTimeTimeSpan = TimeSpan.FromMinutes(Int32.Parse(LogTotalTime));
                 tourItemFactory.AddLog(TourName, ParsedLogDate, LogDistanceAsDouble, LogTotalTimeTimeSpan, LogRatingAsDouble, Vehicle, Report, SteepSections, Scenic, DifficultyLvlAsInt);
+                OnLogCreated(true);
 
             }
             catch (InvalidCastException e)
@@ -160,6 +165,11 @@ namespace TourManager.ViewModels
             this.TourName = tourName;
         }
 
+        private void OnLogCreated(bool logCreated)
+        {
+            LogCreated?.Invoke(this, logCreated);
+        }
+
         private void EmptyFields()
         {
             this.LogDate = DateTime.Now.ToString();
@@ -171,6 +181,44 @@ namespace TourManager.ViewModels
             this.SteepSections = false;
             this.Scenic = false;
             this.DifficultyLevel = "1";
+        }
+
+        public string Error
+        {
+            get { return _error; }
+            set
+            {
+                this._error = value;
+                OnPropertyChanged(nameof(Error));
+            }
+        }
+
+        public string this[string propertyName]
+        {
+            get
+            {
+                return GetErrorForProperty(propertyName);
+            }
+        }
+        private string GetErrorForProperty(string propertyName)
+        {
+            Error = "";
+            //String Alphabetical = @"[A-z]+";
+            String Numerical = @"[0-9]+";
+
+            switch (propertyName)
+            {               
+                case "LogDistance":
+                    Match m = Regex.Match(_logDistance, Numerical);
+                    if (!m.Success)
+                    {
+                        Error = "Log Distance has non-numerical characters! Use only numbers from 0-9!";
+                        return Error;
+                    }
+                    break;
+            }
+            return string.Empty;
+
         }
     }
 }

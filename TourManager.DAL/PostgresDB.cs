@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 using TourManagerModels;
 using Npgsql;
 
@@ -11,11 +12,11 @@ namespace TourManager.DAL
     public class PostgresDB : IDataAccess
     {
         private string connString;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         public PostgresDB()
         {
-            // TO DO: Add connString from config File
-            connString = "Host=localhost;Username=postgres;Password=postgres;Database=TourManager";
+            connString = ConfigurationManager.AppSettings["DB_CONN_STRING"];
         }
 
         public List<Tour> GetItems()
@@ -44,10 +45,7 @@ namespace TourManager.DAL
 
                 if (!reader.HasRows)
                 {
-                    string err = "Could not get any logs for '";
-                    err += tourName;
-                    err += "' !";
-                    System.Windows.MessageBox.Show(err, "Information", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Information);
+                    log.Error("Could not get any logs for tour: " + tourName);
                 }
 
                 while (reader.Read())

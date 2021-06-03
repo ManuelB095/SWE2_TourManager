@@ -8,10 +8,10 @@
         xmlns:views="clr-namespace:TourManager.Views"
         mc:Ignorable="d"
         Title="Window1" Height="600" Width="1000">
+    
+    
 
-    <Grid>
-
-        
+    <Grid>        
 
         <DockPanel>
             
@@ -85,7 +85,7 @@
 
                 <Button Grid.Row="2" Content="View Logs" Command="{Binding NavigateEditLogsCommand}" Margin="2,2,2,2"></Button>
                 <Button Grid.Row="3" Content="Create New Log" Command="{Binding NavigateCreateLogsCommand}" Margin="2,2,2,2"></Button>
-                <Button Grid.Row="4" Content="Edit Selected Tour" Margin="2,2,2,2"></Button>
+                <Button Grid.Row="4" Content="Print Tour Report" Command="{Binding CreateTourReportCommand}" Margin="2,2,2,2"></Button>
                 <Button Grid.Row="5" Content="Delete Selected Tour" Margin="2,2,2,2"></Button>
             </Grid>
 

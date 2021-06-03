@@ -39,6 +39,20 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2021.5.2, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[7.1.15, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.12, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -25,38 +25,39 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Button Content="Back Home" Command="{Binding NavigateHomeCommand}" Grid.Row="0" Grid.Column="0"></Button>
 
-        <Label Content="{Binding TourName}" Grid.Row="1" Grid.Column="0" Margin="0,0,0,4"></Label>
+        <Label Content="{Binding TourName, ValidatesOnDataErrors=True}" Grid.Row="1" Grid.Column="0" Margin="0,0,0,4"></Label>
 
         <Label Content="Datum auswählen: " Grid.Row="2" Grid.Column="0"></Label>
-        <TextBox Text="{Binding LogDate}" Grid.Row="2" Grid.Column="1" Margin="4,0,8,4"></TextBox>
+        <TextBox Text="{Binding LogDate, ValidatesOnDataErrors=True}" Grid.Row="2" Grid.Column="1" Margin="4,0,8,4"></TextBox>
 
         <Label Content="Distance(km): " Grid.Row="3" Grid.Column="0"></Label>
-        <TextBox Text="{Binding LogDistance}" Grid.Row="3" Grid.Column="1" Margin="4,0,8,4"></TextBox>
+        <TextBox Text="{Binding LogDistance, ValidatesOnDataErrors=True}" Grid.Row="3" Grid.Column="1" Margin="4,0,8,4"></TextBox>
 
         <Label Content="TotalTime(min): " Grid.Row="4" Grid.Column="0"></Label>
-        <TextBox Text="{Binding LogTotalTime}" Grid.Row="4" Grid.Column="1" Margin="4,0,8,4"></TextBox>
+        <TextBox Text="{Binding LogTotalTime, ValidatesOnDataErrors=True}" Grid.Row="4" Grid.Column="1" Margin="4,0,8,4"></TextBox>
 
         <Label Content="Rating: " Grid.Row="5" Grid.Column="0"></Label>
-        <TextBox Text="{Binding LogRating}" Grid.Row="5" Grid.Column="1" Margin="4,0,8,4"></TextBox>
+        <TextBox Text="{Binding LogRating, ValidatesOnDataErrors=True}" Grid.Row="5" Grid.Column="1" Margin="4,0,8,4"></TextBox>
 
         <Label Content="Vehicle: " Grid.Row="6" Grid.Column="0"></Label>
-        <TextBox Text="{Binding Vehicle}" Grid.Row="6" Grid.Column="1" Margin="4,0,8,4"></TextBox>
+        <TextBox Text="{Binding Vehicle, ValidatesOnDataErrors=True}" Grid.Row="6" Grid.Column="1" Margin="4,0,8,4"></TextBox>
 
         <Label Content="Report: " Grid.Row="7" Grid.Column="0"></Label>
-        <TextBox Text="{Binding Report}" Grid.Row="7" Grid.Column="1" Height="50" Margin="4,0,8,4"></TextBox>
+        <TextBox Text="{Binding Report, ValidatesOnDataErrors=True}" Grid.Row="7" Grid.Column="1" Height="50" Margin="4,0,8,4"></TextBox>
 
         <Label Content="Steep Sections: " Grid.Row="8" Grid.Column="0"></Label>
-        <CheckBox IsChecked="{Binding SteepSections}" Grid.Row="8" Grid.Column="1" Margin="4"></CheckBox>
+        <CheckBox IsChecked="{Binding SteepSections, ValidatesOnDataErrors=True}" Grid.Row="8" Grid.Column="1" Margin="4"></CheckBox>
 
         <Label Content="Nice Scenery: " Grid.Row="9" Grid.Column="0"></Label>
-        <CheckBox IsChecked="{Binding Scenic}" Grid.Row="9" Grid.Column="1" Margin="4"></CheckBox>
+        <CheckBox IsChecked="{Binding Scenic, ValidatesOnDataErrors=True}" Grid.Row="9" Grid.Column="1" Margin="4"></CheckBox>
 
         <Label Content="Difficulty Level: " Grid.Row="10" Grid.Column="0"></Label>
-        <ComboBox SelectedValue="{Binding DifficultyLevel}" SelectedValuePath="Content" Grid.Row="10" Grid.Column="1" Width="40" Margin="4,4,0,0" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top">
+        <ComboBox SelectedValue="{Binding DifficultyLevel, ValidatesOnDataErrors=True}" SelectedValuePath="Content" Grid.Row="10" Grid.Column="1" Width="40" Margin="4,4,0,0" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top">
             <ComboBoxItem>1</ComboBoxItem>
             <ComboBoxItem>2</ComboBoxItem>
             <ComboBoxItem>3</ComboBoxItem>
@@ -65,5 +66,7 @@
         </ComboBox>
 
         <Button Command="{Binding CreateLogCommand}" Grid.Column="0" Grid.Row="11" Content="Create" HorizontalAlignment="Center" Width="80"></Button>
+        <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="12" Content="{Binding Error, UpdateSourceTrigger=PropertyChanged}" Foreground="Red"></Label>
+
     </Grid>
 </UserControl>

@@ -6,7 +6,9 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Configuration;
 using System.Threading.Tasks;
+using TourManager.DAL;
 
 namespace TourManager.BusinessLayer
 {
@@ -26,12 +28,11 @@ namespace TourManager.BusinessLayer
         //Get those next four from config...
         public string URL_ROUTE { get; set; } = "http://www.mapquestapi.com/directions/v2/route";
 
-        public string KEY = "fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD";
+        public string KEY = ConfigurationManager.AppSettings["MAP_API_KEY"];
         public string URL_STATIC_MAP { get; set; } = "http://www.mapquestapi.com/staticmap/v5/map"; //key=fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD&size=640,480&defaultMarker=none&zoom=11&rand=737758036&session=6085a120-015f-4ee4-02b4-35c2-0e91b2526d11&boundingBox=48.41787,%2015.601635,%2048.192204,%2016.41643";
 
-        public string IMG_PATH { get; set; } = @"C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\Maps\";
-
-
+        public string IMG_PATH { get; set; } = ConfigurationManager.AppSettings["MAPS_FILE_PATH"]; //@"C:\Users\mbern\Downloads\FH-Stuff\4.Semester\SWE2\TourManagerApplication\Maps\"
+      
         public string ParametrizedRouteURL { get; set; }
 
         // Get these from FIRST Request
@@ -47,6 +48,13 @@ namespace TourManager.BusinessLayer
         public string lr_lng { get; set; }
 
         public string ResultingFilePath { get; private set; }
+        
+        private IFileAccess imgManager;
+
+        public MapAPIConnection()
+        {
+            imgManager = new FileHandler();
+        }
 
         public void HandleMapQuestRequest(string from, string to)
         {
@@ -87,21 +95,14 @@ namespace TourManager.BusinessLayer
         private void sendMapRequest()
         {
             HttpWebRequest mapRequest = (HttpWebRequest)WebRequest.Create(this.ParametrizedMapURL);
-            string filePath = "";
-
             using (HttpWebResponse mapResponse = (HttpWebResponse)mapRequest.GetResponse())
             {
                 using (BinaryReader reader = new BinaryReader(mapResponse.GetResponseStream()))
                 {
                     Byte[] imgBytes = reader.ReadBytes(1 * 1024 * 1024 * 10);
-                    filePath = this.IMG_PATH + "testMap.jpg";
-                    using (FileStream fs = new FileStream(filePath, FileMode.Create))
-                    {
-                        fs.Write(imgBytes, 0, imgBytes.Length);
-                    }
+                    this.ResultingFilePath = imgManager.NewFileEntry(IMG_PATH, imgBytes);                   
                 }
             }
-            this.ResultingFilePath = filePath;
         }
 
         private void CreateURLForRouteRequest(string from, string to)

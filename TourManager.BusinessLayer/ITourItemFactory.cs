@@ -23,8 +23,7 @@ namespace TourManager.BusinessLayer
         void UpdateLog(string tourName, DateTime logDate, double logDistance, TimeSpan logTotalTime, double LogRating, string vehicle, string report, bool steepSections, bool scenic, int difficultyLevel);
 
 
-
-        void DeleteTour(string tourName); // Also deletes all Log Files!
+        void DeleteTour(string tourName, string routeInformation); // Also deletes all Log Files!
     
     
     }

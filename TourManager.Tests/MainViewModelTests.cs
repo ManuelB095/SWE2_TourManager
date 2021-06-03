@@ -19,7 +19,6 @@ namespace TourManager.Tests
             NavigationStore falseNav = new NavigationStore();
             MainViewModel mainVM = new MainViewModel(falseNav);
             Assert.That(mainVM.TourItems.Count != 0);
-
             // Not a good test, bc how can i know how many items get returned by the database?
             //Assert.That(mainVM.TourItems.Count == 3); 
         }
