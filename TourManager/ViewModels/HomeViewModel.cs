@@ -29,6 +29,7 @@ namespace TourManager.ViewModels
         public ICommand NavigateEditLogsCommand { get; }
         public ITourItemFactory tourItemFactory;
 
+
         public ImageSource RouteImage
         {
             get { return this.routeImage; }
@@ -100,7 +101,7 @@ namespace TourManager.ViewModels
                 }
             }            
         }
-
+       
         public void RefillData(string tourName)
         {
             var match = this.Tours.FirstOrDefault(toursToCheck => toursToCheck.Name.Contains(tourName));
@@ -116,8 +117,8 @@ namespace TourManager.ViewModels
                 image.BeginInit();
                 image.CacheOption = BitmapCacheOption.OnLoad;
                 image.UriSource = new Uri(routeInformation);
-                image.DecodePixelHeight = 240;
-                image.DecodePixelWidth = 310;
+                image.DecodePixelHeight = 336;
+                image.DecodePixelWidth = 434;
                 image.EndInit();
                 
                 this.RouteImage = image;

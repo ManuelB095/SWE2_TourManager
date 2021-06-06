@@ -202,6 +202,21 @@ namespace TourManager.DAL
             conn.Close();
         }
 
+        public void DeleteLog(string tourName, DateTime timestamp)
+        {
+            using var conn = new NpgsqlConnection(this.connString);
+            conn.Open();
+            using (var cmd = new NpgsqlCommand("Delete From log Where tourname = @tourname And date = @date", conn))
+            {
+                cmd.Parameters.AddWithValue("tourname", tourName);
+                cmd.Parameters.AddWithValue("date", timestamp);
+
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+            conn.Close();
+        }
+
         public void DeleteLogsFromTour(string tourName)
         {
             using var conn = new NpgsqlConnection(this.connString);

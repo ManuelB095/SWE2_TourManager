@@ -56,6 +56,11 @@ namespace TourManager.DAL
             dataSource.DeleteTour(tourName);
         }
 
+        public void DeleteLog(string tourName, DateTime timestamp)
+        {
+            dataSource.DeleteLog(tourName, timestamp);
+        }
+
 
         // Why do we do this?
         // Adding a DAO makes it possible to get data from different sources, which 

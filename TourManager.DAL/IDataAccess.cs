@@ -20,6 +20,8 @@ namespace TourManager.DAL
 
         public void DeleteTour(string tourName);
 
+        public void DeleteLog(string tourName, DateTime timestamp);
+
         public void DeleteLogsFromTour(string tourName);
 
     }

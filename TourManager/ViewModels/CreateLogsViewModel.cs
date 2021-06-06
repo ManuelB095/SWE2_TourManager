@@ -287,7 +287,11 @@ namespace TourManager.ViewModels
                         break;
                     case "LogTotalTime":
                         Match m_num = Regex.Match(_logTotalTime, Numerical);
-
+                        if (LogTotalTime == "")
+                        {
+                            Error = "";
+                            return Error;
+                        }
                         if (!m_num.Success)
                         {
                             Error = "Total Time can only consist of nonnegative whole numbers!";

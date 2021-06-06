@@ -14,14 +14,10 @@ namespace TourManager.Tests
     [TestFixture]
     public class MapAPIConnectionTest
     {
-        //Mock<IFileAccess> mockImgManager = new Mock<IFileAccess>();
         [Test]
         public void SendRequest_returnByteArray() // WARNING: This makes two API Calls. Beware of the free 15.000 Calls per Month Limit!
         {
-            //mockImgManager.Setup(m => m.NewFileEntry(It.IsAny<string>(), It.IsAny<Byte[]>(), It.IsAny<string>(), It.IsAny<string>())).Returns((string path) => { return path; });
-
             MapAPIConnection test = new MapAPIConnection();
-            //test.ChangeImgManager(mockImgManager);
             test.HandleMapQuestRequest("Wien", "Graz");
 
             // Test

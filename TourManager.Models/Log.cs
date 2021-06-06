@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TourManagerModels
 {
-    public class Log : INotifyPropertyChanged, Item
+    public class Log : INotifyPropertyChanged
     {
         private string _tourname; // Foreign Key that identifies which tour the log is for
         private DateTime _date; // ex: '2020-09-02 03:00'

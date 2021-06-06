@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace TourManagerModels
 {
-        public class Tour : INotifyPropertyChanged, Item, IDataErrorInfo
+        public class Tour : INotifyPropertyChanged, IDataErrorInfo
         {
             private string _Name;
             private string _TourDescription;

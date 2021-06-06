@@ -23,6 +23,8 @@ namespace TourManager.ViewModels
         public ITourItemFactory tourItemFactory { get; }
         public event EventHandler<bool> LogEdited;
         public RelayCommand UpdateLogCommand { get; }
+        public RelayCommand DeleteLogCommand { get; }
+
 
         private string _tourName;
         private Log selectedLog;
@@ -49,6 +51,7 @@ namespace TourManager.ViewModels
             UpdateLogCommand = new RelayCommand(UpdateLog);
             this.TourName = "";
             this.Error = "";
+            DeleteLogCommand = new RelayCommand(DeleteSelectedLog);
             GetLogsFromName(this.TourName);
         }
 
@@ -204,6 +207,15 @@ namespace TourManager.ViewModels
             this.TourName = tourName;            
         }
 
+        public void DeleteSelectedLog(object parameter)
+        {
+            if(SelectedLog != null)
+            {
+                tourItemFactory.DeleteLog(TourName, SelectedLog.Date);
+                OnLogEdited(true);
+            }            
+        }
+
         public void FitInputFields()
         {
             this.LogDate = SelectedLog.Date.ToString();
@@ -258,14 +270,14 @@ namespace TourManager.ViewModels
         public string GetErrorForProperty(string propertyName)
         {
 
-            if(this.TourName != "" && this.TourName != null)
+            if (this.TourName != "" && this.TourName != null && this.SelectedLog != null)
             {
                 double outValue = -1;
                 int outRating = -1;
                 string distanceString = "";
                 int outTotalTime = -1;
 
-                String Numerical = @"^[\d]$";
+                String Numerical = @"^[\d]+$";
 
                 if (LogDistance != null && LogRating != null)
                 {
@@ -275,12 +287,17 @@ namespace TourManager.ViewModels
                     double.TryParse(distanceString, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, format, out outValue);
                     Int32.TryParse(LogRating, out outRating);
                     Int32.TryParse(LogTotalTime, out outTotalTime);
-                }                
+                }
 
                 switch (propertyName)
                 {
                     case "LogDistance":
-                       
+                        if (distanceString == "")
+                        {
+                            Error = "";
+                            return Error;
+                        }
+
                         if (outValue != 0)
                         {
                             if (outValue < 0.0)
@@ -296,7 +313,12 @@ namespace TourManager.ViewModels
                         }
                         break;
                     case "LogRating":
-                        
+                        if (LogRating == "")
+                        {
+                            Error = "";
+                            return Error;
+                        }
+
                         if (outRating != 0)
                         {
                             if (outRating > 10)
@@ -317,10 +339,14 @@ namespace TourManager.ViewModels
                         }
                         break;
                     case "LogTotalTime":
-                        Match m_num = Regex.Match(_logTotalTime, Numerical);                        
-
+                        Match m_num = Regex.Match(_logTotalTime, Numerical);
+                        if (LogTotalTime == "")
+                        {
+                            Error = "";
+                            return Error;
+                        }
                         if (!m_num.Success)
-                        {                         
+                        {
                             Error = "Total Time can only consist of nonnegative whole numbers!";
                             return Error;
                         }
@@ -328,7 +354,6 @@ namespace TourManager.ViewModels
                 }
             }
             return string.Empty;
-            
         }
     }
 }

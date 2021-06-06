@@ -26,6 +26,8 @@ namespace TourManager.BusinessLayer
 
         void DeleteTour(string tourName, string routeInformation); // Also deletes all Log Files!
 
+        void DeleteLog(string tourName, DateTime timestamp);
+
         void ChangeDataSource(ITourItemDAO newSource);
     
     

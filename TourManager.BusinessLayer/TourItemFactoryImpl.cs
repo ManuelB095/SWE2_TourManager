@@ -61,6 +61,11 @@ namespace TourManager.BusinessLayer
             databaseDAO.DeleteTour(tourName);
         }
 
+        public void DeleteLog(string tourname, DateTime timestamp)
+        {
+            databaseDAO.DeleteLog(tourname, timestamp);
+        }
+
         public void ChangeDataSource(ITourItemDAO newSource)
         {
             this.databaseDAO = newSource;

@@ -242,3 +242,127 @@
 12:25:45,567 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
 12:25:49,420 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
 12:25:49,442 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+16:51:42,346 [TourManager.DAL.FileHandler] INFO -Successfully saved image -3.jpg
+16:51:43,401 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+16:51:51,857 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Szenische Route
+16:53:05,015 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Szenische Route
+16:53:08,604 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Szenische Route
+16:53:10,181 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Szenische Route
+16:53:10,191 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Szenische Route
+16:53:13,872 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Szenische Route
+16:53:13,878 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Szenische Route
+16:53:22,812 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Szenische Route
+16:53:22,819 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Szenische Route
+16:53:22,820 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Szenische Route
+16:53:23,490 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Szenische Route
+16:53:23,498 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Szenische Route
+16:53:23,499 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Szenische Route
+16:55:14,878 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+16:55:14,890 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+16:55:14,890 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+16:55:14,903 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+16:55:20,222 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+16:55:20,227 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+16:55:20,227 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+16:55:20,227 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+16:55:20,228 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+16:55:20,231 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:17:55,120 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+17:20:18,755 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:18,771 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:22,013 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:22,015 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:25,202 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:25,203 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:25,206 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:27,129 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:27,130 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:27,133 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:29,749 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:29,750 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:29,755 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:36,093 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:36,093 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:36,093 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:36,096 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:52,628 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:52,629 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:52,629 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:20:52,631 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:43,838 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+17:21:53,069 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:53,069 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:53,070 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:53,071 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:54,337 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:54,337 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:54,338 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:54,338 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:55,187 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:55,188 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:55,188 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:55,188 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:55,189 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:57,378 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:57,378 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:57,378 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:57,379 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:57,379 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:21:57,379 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:26:22,639 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:26:22,650 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:27:24,987 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:27:24,995 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:27:27,536 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:27:27,536 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:27:29,030 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:27:29,030 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:27:34,634 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:27:34,635 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:27:39,369 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:27:39,369 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:27:39,371 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:29:38,826 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:29:40,068 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:29:40,069 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:29:42,055 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:29:42,061 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:29:43,994 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:29:43,996 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:29:45,886 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:29:45,889 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:29:55,570 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:29:55,570 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:29:55,571 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:29:56,797 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:29:56,797 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:29:56,798 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:31:39,143 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:31:48,595 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:33:32,023 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:33:33,556 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:34:14,639 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:34:23,083 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:34:25,514 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:35:49,353 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:35:54,123 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:35:57,467 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:36:23,738 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:36:27,485 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:37:27,102 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:37:29,054 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:37:32,434 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:37:37,137 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:37:37,139 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:37:39,340 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:37:39,350 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:37:45,802 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:37:45,803 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:37:49,013 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:37:49,013 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:56:54,777 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:56:59,627 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:56:59,629 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:57:49,662 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:57:49,662 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+17:57:49,669 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor

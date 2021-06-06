@@ -13,9 +13,9 @@
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Column="0" Grid.Row="0" Text="Name: "></TextBlock>
@@ -55,14 +55,10 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Label Grid.Column="0" Content="Logs"></Label>
-                <Button Grid.Column="1" Content="+" MinWidth="40" Margin="2,0,2,0"></Button>
-            <Button Grid.Column="2" Content="-" MinWidth="40" Margin="2,0,2,0"></Button>
-            <Button Grid.Column="3" Content="Edit" MinWidth="40" Margin="2,0,2,0"></Button>
-
             </Grid>
 
 
-        <DataGrid IsReadOnly="True" Grid.Column="0" Grid.Row="2" AutoGenerateColumns="False" Margin="5" ItemsSource="{Binding Logs}">
+        <DataGrid IsReadOnly="True" Grid.Column="0" Grid.Row="2" AutoGenerateColumns="False" Margin="0" ItemsSource="{Binding Logs}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Date" Binding="{Binding Date}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Distance" Binding="{Binding Distance}"></DataGridTextColumn>

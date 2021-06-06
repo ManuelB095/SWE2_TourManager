@@ -21,5 +21,6 @@ namespace TourManager.DAL
         public void UpdateLog(string tourName, DateTime logDate, double logDistance, TimeSpan logTotalTime, double LogRating, string vehicle, string report, bool steepSections, bool scenic, int difficultyLevel);
 
         public void DeleteTour(string tourName);
+        public void DeleteLog(string tourname, DateTime timestamp);
     }
 }
