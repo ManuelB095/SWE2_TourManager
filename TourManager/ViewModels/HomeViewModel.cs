@@ -26,7 +26,8 @@ namespace TourManager.ViewModels
         private ImageSource routeImage;
 
         public ICommand NavigateEditToursCommand { get; }
-        private ITourItemFactory tourItemFactory;
+        public ICommand NavigateEditLogsCommand { get; }
+        public ITourItemFactory tourItemFactory;
 
         public ImageSource RouteImage
         {
@@ -50,10 +51,12 @@ namespace TourManager.ViewModels
             }
         }
 
-        public HomeViewModel(NavigationStore navStore)
-        {           
+        public HomeViewModel(NavigationStore navStore, ITourItemFactory factInstance)
+        {
+            this.tourItemFactory = factInstance;
+            NavigateEditToursCommand = new NavigateCommand<EditToursViewModel>(navStore, () => new EditToursViewModel(navStore, tourItemFactory));
+            NavigateEditLogsCommand = new NavigateCommand<EditLogsViewModel>(navStore, () => new EditLogsViewModel(navStore, tourItemFactory));
 
-            NavigateEditToursCommand = new NavigateCommand<EditToursViewModel>(navStore, () => new EditToursViewModel(navStore));
             this.tourItemFactory = TourItemFactory.GetInstance();
             this.Tours = new ObservableCollection<Tour>();
             FillTourItems();
@@ -86,7 +89,7 @@ namespace TourManager.ViewModels
             }
         }
 
-        private void GetLogsFromName(string tourName)
+        public void GetLogsFromName(string tourName)
         {
             if(tourName != "")
             {

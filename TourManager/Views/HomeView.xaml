@@ -37,10 +37,10 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     
-                    <Label Grid.Column="0" Grid.Row="0" Content="Tour Distance: "></Label>
+                    <Label Grid.Column="0" Grid.Row="0" Content="Tour Distance: " FontSize="14"></Label>
                     <TextBlock Grid.Column="1"  Grid.Row="0" Text="{Binding TourSelected.TourDistance}" VerticalAlignment="Center"></TextBlock>
-                    <Label Grid.Column="0" Grid.Row="1" Content="Desciption: "></Label>
-                    <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding TourSelected.TourDescription}" VerticalAlignment="Center"></TextBlock>
+                    <Label Grid.Column="0" Grid.Row="1" Content="Desciption: " FontSize="14"></Label>
+                    <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding TourSelected.TourDescription}" VerticalAlignment="Top" Margin="0,6,0,0" FontSize="14"></TextBlock>
                 </Grid>
             </TabItem>
         </TabControl>

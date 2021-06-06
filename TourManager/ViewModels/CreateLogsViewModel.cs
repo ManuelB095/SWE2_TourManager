@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -37,18 +38,22 @@ namespace TourManager.ViewModels
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
 
-        public CreateLogsViewModel(NavigationStore navStore)
+        public CreateLogsViewModel(NavigationStore navStore, ITourItemFactory factInstance)
         {
-            tourItemFactory = TourItemFactory.GetInstance();
+            tourItemFactory = factInstance;
             CreateLogCommand = new RelayCommand(CreateLog);
+            this.Error = "";
             this.TourName = "(No Tour Selected)";
             EmptyFields(); //Sets all fields to being empty
         }
 
         private void CreateLog(object commandParameter)
         {
-            // TODO: Make Better Checking Function
-            try
+            if (HasEmptyInputs())
+            {
+                Error = "Not all fields have a value. Please fill in the remaining fields";
+            }
+            if(Error == "")
             {
                 DateTime ParsedLogDate = DateTime.Parse(LogDate);
                 double LogDistanceAsDouble = Convert.ToDouble(LogDistance);
@@ -57,15 +62,10 @@ namespace TourManager.ViewModels
                 TimeSpan LogTotalTimeTimeSpan = TimeSpan.FromMinutes(Int32.Parse(LogTotalTime));
                 tourItemFactory.AddLog(TourName, ParsedLogDate, LogDistanceAsDouble, LogTotalTimeTimeSpan, LogRatingAsDouble, Vehicle, Report, SteepSections, Scenic, DifficultyLvlAsInt);
                 OnLogCreated(true);
-
+                MessageBox.Show("Successfully created Log!");
+                EmptyFields(); // Empties Fields so a new Log can be created
             }
-            catch (InvalidCastException e)
-            {
-                MessageBox.Show(e.Message);
-            }
-
-            MessageBox.Show("Successfully created Log!");
-            EmptyFields(); // Empties Fields so a new Log can be created            
+                        
         }
 
         public string TourName
@@ -160,6 +160,21 @@ namespace TourManager.ViewModels
             }
         }
 
+        public bool HasEmptyInputs()
+        {
+            if (LogDate == "" || LogDistance == "" || LogTotalTime == "" || LogRating == "" || Vehicle == "" || Report == "" || DifficultyLevel == "")
+            {
+                return true;
+            }
+            else if (LogDate == null || LogDistance == null || LogTotalTime == null || LogRating == null || Vehicle == null || Report == null || DifficultyLevel == null)
+            {
+                return true;
+            }
+            else if (TourName == null || TourName == "")
+            { return true; }
+            return false;
+        }
+
         public void UpdateTourName(string tourName)
         {
             this.TourName = tourName;
@@ -200,25 +215,88 @@ namespace TourManager.ViewModels
                 return GetErrorForProperty(propertyName);
             }
         }
-        private string GetErrorForProperty(string propertyName)
+        public string GetErrorForProperty(string propertyName)
         {
-            Error = "";
-            //String Alphabetical = @"[A-z]+";
-            String Numerical = @"[0-9]+";
+            if (this.TourName != "")
+            {
+                double outValue = -1;
+                int outRating = -1;
+                string distanceString = "";
+                int outTotalTime = -1;
 
-            switch (propertyName)
-            {               
-                case "LogDistance":
-                    Match m = Regex.Match(_logDistance, Numerical);
-                    if (!m.Success)
-                    {
-                        Error = "Log Distance has non-numerical characters! Use only numbers from 0-9!";
-                        return Error;
-                    }
-                    break;
+                String Numerical = @"^[\d]+$";
+
+                if (LogDistance != null && LogRating != null)
+                {
+                    distanceString = LogDistance.Replace(',', '.'); //Dynamically change/correct erroneous separators
+                    var format = new NumberFormatInfo();
+                    format.NegativeSign = "-";
+                    double.TryParse(distanceString, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, format, out outValue);
+                    Int32.TryParse(LogRating, out outRating);
+                    Int32.TryParse(LogTotalTime, out outTotalTime);
+                }
+
+                switch (propertyName)
+                {
+                    case "LogDistance":
+                        if (distanceString == "")
+                        {
+                            Error = "";
+                            return Error;
+                        }
+
+                        if (outValue != 0)
+                        {
+                            if (outValue < 0.0)
+                            {
+                                Error = "Log Distance can not be smaller than Zero!";
+                                return Error;
+                            }
+                        }
+                        else
+                        {
+                            Error = "Log Distance can only use integer or decimal numbers! Use only numbers from 0-9!";
+                            return Error;
+                        }
+                        break;
+                    case "LogRating":
+                        if (LogRating == "")
+                        {
+                            Error = "";
+                            return Error;
+                        }
+
+                        if (outRating != 0)
+                        {
+                            if (outRating > 10)
+                            {
+                                Error = "Rating cannot be higher than 10";
+                                return Error;
+                            }
+                            else if (outRating < 0)
+                            {
+                                Error = "Rating must be a positive integer value";
+                                return Error;
+                            }
+                        }
+                        else
+                        {
+                            Error = "Rating has to be a number (no decimals) between 1 and 10";
+                            return Error;
+                        }
+                        break;
+                    case "LogTotalTime":
+                        Match m_num = Regex.Match(_logTotalTime, Numerical);
+
+                        if (!m_num.Success)
+                        {
+                            Error = "Total Time can only consist of nonnegative whole numbers!";
+                            return Error;
+                        }
+                        break;
+                }
             }
             return string.Empty;
-
         }
     }
 }

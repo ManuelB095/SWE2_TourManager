@@ -9,6 +9,9 @@ namespace TourManager.BusinessLayer
 {
     public interface IReportGenerator
     {
+        public string GetPath();
+        public bool ImgExists { get; }
+        public void ChangeOutputPath(string newPath);
         public void GenerateTourReport(Tour t);
     }
 }

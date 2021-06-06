@@ -58,18 +58,18 @@ namespace TourManager.ViewModels
             }
         }
 
-        public MainViewModel(NavigationStore navStore)
+        public MainViewModel(NavigationStore navStore, ITourItemFactory factInstance)
         {
             navigationStore = navStore;
             navigationStore.currentViewModelChanged += OnCurrentViewModelChanged;
 
-            this.tourItemFactory = TourItemFactory.GetInstance();
+            this.tourItemFactory = factInstance;
             this.TourItems = new ObservableCollection<Tour>();
             FillTourItems();
 
             DisplayHomeCommand = new NavigateCommand<HomeViewModel>(navigationStore, () =>
             {
-                var viewModel = new HomeViewModel(navigationStore);                
+                var viewModel = new HomeViewModel(navigationStore, tourItemFactory );                
                 this.selectedItemChanged += (_, tourName) => { viewModel.RefillData(tourName); };
                 if (SelectedItem != null)
                 {
@@ -82,7 +82,7 @@ namespace TourManager.ViewModels
 
             NavigateEditToursCommand = new NavigateCommand<EditToursViewModel>(navigationStore, () =>
             {
-                var viewModel = new EditToursViewModel(navigationStore);
+                var viewModel = new EditToursViewModel(navigationStore, tourItemFactory);
                 
                 // Add EditToursViewModel`s RefillData method to subscribers. Fire event when selectedItem gets changed!                
                 this.selectedItemChanged += (_, tourName) => { viewModel.RefillData(tourName); };
@@ -96,7 +96,7 @@ namespace TourManager.ViewModels
             });
             NavigateCreateToursCommand = new NavigateCommand<CreateToursViewModel>(navigationStore, () => 
             {
-                var viewModel = new CreateToursViewModel(navigationStore);
+                var viewModel = new CreateToursViewModel(navigationStore, tourItemFactory);
 
                 //Subscribe to TourCreated Event to update automatically
                 viewModel.TourCreated += (_, tourCreated) => { this.Refresh(_); };
@@ -110,7 +110,7 @@ namespace TourManager.ViewModels
 
             NavigateCreateLogsCommand = new NavigateCommand<CreateLogsViewModel>(navigationStore, () =>
             {
-                var viewModel = new CreateLogsViewModel(navigationStore);
+                var viewModel = new CreateLogsViewModel(navigationStore, tourItemFactory);
 
                 // Add EventSubscriber
                 this.selectedItemChanged += (_, tourName) => { viewModel.UpdateTourName(tourName); };
@@ -124,7 +124,7 @@ namespace TourManager.ViewModels
 
             NavigateEditLogsCommand = new NavigateCommand<EditLogsViewModel>(navigationStore, () =>
             {
-                var viewModel = new EditLogsViewModel(navigationStore);
+                var viewModel = new EditLogsViewModel(navigationStore, tourItemFactory);
                 this.selectedItemChanged += (_, tourName) => { viewModel.UpdateTourName(tourName); };
                 if (SelectedItem != null)
                 {
@@ -195,7 +195,7 @@ namespace TourManager.ViewModels
             TourItems.Clear();
             SearchName = "";
             FillTourItems();
-            log.Error("Refreshed!");
+            log.Info("Refreshed!");
         }
 
         private void FillTourItems()

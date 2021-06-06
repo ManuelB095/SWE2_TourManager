@@ -164,3 +164,81 @@
 08:51:24,419 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
 08:51:28,928 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
 08:51:30,376 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+21:21:52,116 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+21:21:53,349 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+22:42:16,461 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+13:33:16,370 [TourManager.ViewModels.CreateToursViewModel] DEBUG -Tour Name is longer than allowed at the moment.
+13:41:51,031 [TourManager.ViewModels.CreateToursViewModel] DEBUG -Tour Name is longer than allowed at the moment.
+13:42:31,690 [TourManager.ViewModels.CreateToursViewModel] DEBUG -Tour Name is longer than allowed at the moment.
+13:45:31,000 [TourManager.ViewModels.CreateToursViewModel] DEBUG -Tour Name is longer than allowed at the moment.
+13:46:58,188 [TourManager.ViewModels.CreateToursViewModel] DEBUG -Tour Name has unallowed input at the moment.
+13:46:58,199 [TourManager.ViewModels.CreateToursViewModel] DEBUG -Tour Name is longer than allowed at the moment.
+13:50:39,370 [TourManager.ViewModels.CreateToursViewModel] DEBUG -Tour Description is longer than allowed at the moment.
+21:04:05,978 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+21:05:28,395 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+08:54:12,718 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+08:54:14,432 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+10:15:56,293 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+10:15:56,884 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+10:21:01,625 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+10:21:01,644 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+10:21:58,576 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+10:21:59,792 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+10:22:01,622 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+10:22:02,906 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+10:22:04,689 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+10:22:07,618 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+10:22:07,624 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+10:29:28,847 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+10:29:32,990 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+10:47:14,735 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+10:47:14,743 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+10:56:55,817 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+10:57:28,766 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+10:57:36,444 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+10:57:49,543 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+10:58:08,876 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+11:01:34,150 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:01:38,406 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:01:56,323 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:07:58,091 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:07:58,111 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:08:00,893 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:08:00,897 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:08:07,694 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:08:07,696 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:09:44,211 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:09:46,763 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:09:53,333 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:28:44,011 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:31:24,231 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:31:35,666 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:33:19,352 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:36:50,693 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:40:03,607 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:40:16,161 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:58:46,279 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+11:58:47,157 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:05:02,402 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:06:21,162 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:06:24,277 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+12:11:21,420 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:12:14,195 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:12:54,435 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:13:13,873 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+12:22:36,354 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:23:54,534 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+12:23:57,841 [TourManager.ViewModels.EditToursViewModel] INFO -Updated Tour Bergweg nach Mordor
+12:25:30,224 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:25:32,554 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:25:35,223 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:25:36,234 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:25:37,893 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:25:39,149 [TourManager.ViewModels.MainViewModel] INFO -Refreshed!
+12:25:41,484 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:25:44,299 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:25:44,324 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:25:45,541 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:25:45,567 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:25:49,420 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor
+12:25:49,442 [TourManager.DAL.PostgresDB] ERROR -Could not get any logs for tour: Bergweg nach Mordor

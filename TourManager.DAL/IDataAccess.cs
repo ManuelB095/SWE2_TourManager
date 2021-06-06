@@ -21,5 +21,6 @@ namespace TourManager.DAL
         public void DeleteTour(string tourName);
 
         public void DeleteLogsFromTour(string tourName);
+
     }
 }

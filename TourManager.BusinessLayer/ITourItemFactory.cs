@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TourManager.DAL;
 using TourManagerModels;
 
 namespace TourManager.BusinessLayer
@@ -24,6 +25,8 @@ namespace TourManager.BusinessLayer
 
 
         void DeleteTour(string tourName, string routeInformation); // Also deletes all Log Files!
+
+        void ChangeDataSource(ITourItemDAO newSource);
     
     
     }

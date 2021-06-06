@@ -8,7 +8,7 @@ namespace TourManager.BusinessLayer
 {
     internal class TourItemFactoryImpl : ITourItemFactory
     {
-        private TourItemDAO databaseDAO = new TourItemDAO();
+        private ITourItemDAO databaseDAO = new TourItemDAO();
         private FileHandler fileHandler = new FileHandler();
         public List<Tour> TourItems { get; } = new List<Tour>();
 
@@ -59,6 +59,11 @@ namespace TourManager.BusinessLayer
         {
             fileHandler.DeleteEntryByName(routeInformation);
             databaseDAO.DeleteTour(tourName);
+        }
+
+        public void ChangeDataSource(ITourItemDAO newSource)
+        {
+            this.databaseDAO = newSource;
         }
     }
 }

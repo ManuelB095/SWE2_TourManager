@@ -23,6 +23,26 @@ namespace TourManagerModels
         private bool _scenic;  // Yes/NO
         private int _difficultyLevel; // Rating between 1-5
 
+        public Log(string tourname, DateTime date, string report, double distance, TimeSpan totalTime, double rating, string vehicle, double velocity, bool steepSections, bool scenic, int diffLevel)
+        {
+            this.Tourname = tourname;
+            this.Date = date;
+            this.Report = report;
+            this.Distance = distance;
+            this.TotalTime = totalTime;
+            this.Rating = rating;
+            this.Vehicle = vehicle;
+            this.Velocity = velocity;
+            this.SteepSections = steepSections;
+            this.IsScenic = scenic;
+            this.DifficultyLevel = diffLevel;
+        }
+
+        public Log()
+        {
+
+        }
+
         public string Tourname
         {
             get { return _tourname; }

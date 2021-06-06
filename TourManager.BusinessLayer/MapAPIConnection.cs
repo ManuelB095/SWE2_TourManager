@@ -13,19 +13,7 @@ using TourManager.DAL;
 namespace TourManager.BusinessLayer
 {
     public class MapAPIConnection
-    {
-        // TODO
-        // Get key from config
-        // Get imges folder from config
-        // key = fNyu2LJqK0FYbcJSgAKzTUzSARvIEKAD
-
-        // Second TODO
-        // Save Params from First Request
-        // Send SecRequest with savedParams
-        // Save map as image file and
-        // ... persist location in DB under routeinformation
-
-        //Get those next four from config...
+    {       
         public string URL_ROUTE { get; set; } = "http://www.mapquestapi.com/directions/v2/route";
 
         public string KEY = ConfigurationManager.AppSettings["MAP_API_KEY"];
@@ -64,6 +52,10 @@ namespace TourManager.BusinessLayer
             sendMapRequest();
         }
 
+        public void ChangeImgManager(IFileAccess imgManagerNew)
+        {
+            this.imgManager = imgManagerNew;
+        }
 
         // Sends First Request to obtain Route Information.
         private void sendRouteRequest()

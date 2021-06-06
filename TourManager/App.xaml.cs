@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using TourManager.BusinessLayer;
 using TourManager.Stores;
 using TourManager.ViewModels;
 
@@ -18,11 +19,12 @@ namespace TourManager
         protected override void OnStartup(StartupEventArgs e)
         {
             NavigationStore navigationStore = new NavigationStore();
-            navigationStore.CurrentViewModel = new HomeViewModel(navigationStore);
+            ITourItemFactory factInstance = TourItemFactory.GetInstance();
+            navigationStore.CurrentViewModel = new HomeViewModel(navigationStore, factInstance);
 
             MainWindow = new MainWindow()
             {
-                DataContext = new MainViewModel(navigationStore)
+                DataContext = new MainViewModel(navigationStore, factInstance)
             };
             MainWindow.Show();
 

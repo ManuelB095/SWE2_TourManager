@@ -29,10 +29,11 @@ namespace TourManager.ViewModels
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        public CreateToursViewModel(NavigationStore navStore)
+        public CreateToursViewModel(NavigationStore navStore, ITourItemFactory factInstance)
         {
-            tourItemFactory = TourItemFactory.GetInstance();
+            tourItemFactory = factInstance;
             CreateTourCommand = new RelayCommand(CreateTour);
+            this.Error = "";
             this.tourName = "TourName";
             this.tourDescription = "Description";
             this.From = "From";
@@ -111,15 +112,16 @@ namespace TourManager.ViewModels
                 return GetErrorForProperty(propertyName);
             }
         }
-        private string GetErrorForProperty(string propertyName)
+        public string GetErrorForProperty(string propertyName)
         {
-            Error = "";
-            String Alphabetical = @"[A-z]+";
+            String Alphabetical = @"[A-Za-z]+";
+            String Numerical = @"[\d]";
 
             switch (propertyName)
             {
                 case "tourName":
                     Match m = Regex.Match(_tourName, Alphabetical);
+                    Match m_num = Regex.Match(_tourName, Numerical);
                     if (_tourName.Length > 40)
                     {
                         Error = "Tour Name cannot be longer than 40 chars!";
@@ -131,7 +133,7 @@ namespace TourManager.ViewModels
                         Error = "Field Tour Name is empty!";
                         return Error;
                     }
-                    else if (!m.Success)
+                    else if (!m.Success || m_num.Success)
                     {
                         Error = "Tour Name can only consist of characters A-Z or a-z!";
                         log.Debug("Tour Name has unallowed input at the moment.");
@@ -148,25 +150,25 @@ namespace TourManager.ViewModels
                     break;
                 case "From":
                     Match m2 = Regex.Match(_from, Alphabetical);
-                    if (!m2.Success)
+                    Match m2_num = Regex.Match(_from, Numerical);
+                    if (!m2.Success || m2_num.Success)
                     {
-                        Error = "From Field did not match Regex.";
+                        Error = "From Field can only contain alphabetic characters.";
                         return Error;
                     }
                     break;
                 case "To":
                     Match m3 = Regex.Match(_to, Alphabetical);
-                    if (!m3.Success)
+                    Match m3_num = Regex.Match(_from, Numerical);
+
+                    if (!m3.Success || m3_num.Success)
                     {
-                        Error = "To Field did not match Regex.";
+                        Error = "To Field can only contain alphabetic characters.";
                         return Error;
                     }
                     break;
             }
             return string.Empty;
-
         }
-
-
     }
 }

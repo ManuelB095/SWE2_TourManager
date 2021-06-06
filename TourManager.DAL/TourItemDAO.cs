@@ -7,7 +7,7 @@ using TourManagerModels;
 
 namespace TourManager.DAL
 {
-    public class TourItemDAO // Data Access Object
+    public class TourItemDAO : ITourItemDAO // Data Access Object
     {
         // Try to work independent from dataSource.
         // Trust that IDataAcces will do what it needs to

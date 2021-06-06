@@ -20,7 +20,63 @@ namespace TourManager.BusinessLayer
     public class ReportGeneratorImpl : IReportGenerator
     {
         private string path = ConfigurationManager.AppSettings["PDF_FILE_PATH"]; // TO DO: Get path from config
+        private string blankImagePath = ConfigurationManager.AppSettings["BLANK_IMG_PATH"];
         private PostgresDB Dbase = new PostgresDB();
+
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        private bool imgExists = false;
+
+        public bool ImgExists
+        {
+            get { return imgExists; }
+            set
+            {
+                imgExists = value;
+            }
+        }
+
+        public ReportGeneratorImpl()
+        {
+            
+        }
+
+        public void ChangeOutputPath(string newPath)
+        {
+            this.path = newPath;
+        }
+
+        public string GetPath()
+        {
+            return this.path;
+        }
+
+        public Image PrepareImgFromTour(Tour t)
+        {
+            int height = 120;
+            int width = 180;
+
+            try
+            {
+                Image img = new Image(ImageDataFactory.Create(t.RouteInformation));
+                img.SetHorizontalAlignment(HorizontalAlignment.CENTER);
+                img.SetHeight(height);
+                img.SetWidth(width);
+                ImgExists = true;
+                return img;
+            }
+            catch(Exception e)
+            {
+                ImgExists = false;
+                log.Error(e.Message);
+                log.Error("Means: Image of tour" + t.Name + "not found.");                
+            }
+            Image blank = new Image(ImageDataFactory.Create(blankImagePath));
+            blank.SetHorizontalAlignment(HorizontalAlignment.CENTER);
+            blank.SetHeight(height);
+            blank.SetWidth(width);
+            return blank;
+        }
 
         public void GenerateTourReport(Tour t)
         {
@@ -42,10 +98,7 @@ namespace TourManager.BusinessLayer
             LineSeparator sep = new LineSeparator(new SolidLine()).SetMarginTop(10).SetMarginBottom(10);
             LineSeparator dottSep = new LineSeparator(new DottedLine()).SetMarginTop(10).SetMarginBottom(10);
 
-            Image img = new Image(ImageDataFactory.Create(t.RouteInformation));
-            img.SetHorizontalAlignment(HorizontalAlignment.CENTER);
-            img.SetHeight(120);
-            img.SetHeight(180);
+            Image img = PrepareImgFromTour(t);
 
             pdf.Add(img);
             pdf.Add(sep);
