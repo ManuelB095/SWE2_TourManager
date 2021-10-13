@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="TourManager.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TourManager.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <Grid Margin="2,2,2,2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Name: "></TextBlock>
+        <TabControl>
+            <TabItem Header="Route">
+                <Image Margin="2,2,2,2" Source="{Binding RouteImage, UpdateSourceTrigger=PropertyChanged}" Stretch="None">
+                    
+                </Image>
+            </TabItem>
+            <TabItem Header="Description">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Label Grid.Column="0" Grid.Row="0" Content="Tour Distance: " FontSize="14"></Label>
+                    <TextBlock Grid.Column="1"  Grid.Row="0" Text="{Binding TourSelected.TourDistance}" VerticalAlignment="Center"></TextBlock>
+                    <Label Grid.Column="0" Grid.Row="1" Content="Desciption: " FontSize="14"></Label>
+                    <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding TourSelected.TourDescription}" VerticalAlignment="Top" Margin="0,6,0,0" FontSize="14"></TextBlock>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        
+            <Grid Grid.Column="1" Grid.Row="1" Margin="0,2,2,2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Logs"></Label>
+            </Grid>
+
+
+        <DataGrid IsReadOnly="True" Grid.Column="0" Grid.Row="2" AutoGenerateColumns="False" Margin="0" ItemsSource="{Binding Logs}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date" Binding="{Binding Date}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Distance" Binding="{Binding Distance}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Time(Total)" Binding="{Binding TotalTime}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Rating" Binding="{Binding Rating}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Vehicle" Binding="{Binding Vehicle}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Velocity(km/h)" Binding="{Binding Velocity}"></DataGridTextColumn>
+                <DataGridTextColumn Header="SteepSections" Binding="{Binding SteepSections}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Scenic" Binding="{Binding IsScenic}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Difficulty Level" Binding="{Binding DifficultyLevel}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Report" Binding="{Binding Report}" Width="*"></DataGridTextColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,61 @@
+--
+-- CREATE Table Statements
+--
+
+Create Table Tour (
+	tourname varchar(64) primary key,
+	description varchar(1012) not null,
+	routeinformation varchar(256) not null,
+	tourdistance decimal not null
+);
+
+Create Table Log (
+	date timestamp primary key,
+	tourname varchar(64) not null,
+	report varchar(1012) not null,
+	distance decimal not null,
+	totaltime time not null,
+	rating decimal not null,
+	vehicle varchar(64) not null,
+	velocity decimal not null,
+	steepsections boolean not null default false,
+	scenic boolean not null default false,
+	difficultylevel int not null,
+	
+	Check(distance >= 0.0),
+	Check(rating >= 0.0 AND rating <= 10.0),
+	Check(velocity >= 0.0),
+	Check(difficultylevel >= 1 AND difficultylevel <= 5),
+	
+	Constraint fk_tourname Foreign Key(tourname) References Tour(tourname)
+);
+
+-- SELECT
+
+Select * from Tour;
+
+--
+-- INSERT Statements
+-- 
+
+Insert Into Tour(tourname,description,routeInformation,tourdistance)
+Values('Gemäßigte Stadtroute',
+	  'Eine aussichtsreiche Zugfahrt, bei der selbst Einsteiger und Babys mitmachen können',
+	  'Von Wien nach Linz in 1:15h',
+	  3.5);
+Insert Into Tour(tourname,description,routeInformation,tourdistance)
+Values('Bergweg nach Mordor',
+	  'Man geht nicht einfach nach Mordor heißt es im Volksmund. Doch das hielt die Wunderpolinger Wanderspatzen nicht auf und sie haben trotzdem eine Route angelegt. Treten auch sie in die Fußstapfen von Frodo und Co mit dieser wunderschönen Bergtour',
+	   'Von Wien nach Mordor in 96:45',
+	  365);
+Insert Into Tour(tourname,description,routeInformation,tourdistance)
+Values('Kurz zum Spar',
+	  'Haben sie es satt, dass wiedermal kein Essen im Kühlschrank ist? Das muss nicht sein! Mit unserer Kurz-Zum-Spar Wanderroute kommen sie direkt an jedermanns liebstem Lebensmittelfachhändler vorbei!',
+	  'Zum Spar in weiß ich nicht, 5-10 Minuten?',
+	  1);
+	  
+
+
+
+Insert Into Log(date,tourname,report,distance,totaltime,rating,vehicle,velocity,steepsections,scenic,difficultylevel)
+Values('2020-09-21 01:00','Bergweg nach Mordor','hello', 4.5, '00:20:10', 4.5, 'bike',20.5, TRUE, TRUE, 4 );
